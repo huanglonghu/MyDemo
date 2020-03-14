@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_cotainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider5"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:showDividers="middle">
+
+    <com.xx.yuefang.ui.wrapper.HouseMessageWrapper
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.HouseTypeWrapper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.DynamicWrapper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.CommentWrapper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.QAWrapper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.LocationEnvironmenWrapper
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xx.yuefang.ui.wrapper.GuessYouLikeWrapper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+

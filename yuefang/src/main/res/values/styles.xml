@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <style name="dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+
+
+    <style name="dialog3" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="dialog4" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog1</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
+
+
+    <style name="popupStyle">
+        <item name="android:windowEnterAnimation">@anim/pop_back</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="popupStyle2">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit</item>
+    </style>
+
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star1</item>
+    </style>
+
+
+
+
+    <!--<style name="tab" parent="android:Widget">-->
+
+        <!--<item name="tabIndicatorColor">#fff</item>-->
+        <!--<item name="tabIndicatorHeight">5dp</item>-->
+
+
+        <!--<item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>-->
+        <!--<item name="tabSelectedTextColor">#fff</item>-->
+      <!---->
+    <!--</style>-->
+
+    <style name="TextAppearance.Design.Tab" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <style name="psdTextstyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@drawable/bg_btn_psd</item>
+    </style>
+
+
+    <style name="title">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/t2</item>
+        <item name="android:textSize">38pt</item>
+    </style>
+
+
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationPicker</item>
+    </style>
+
+    <style name="AnimationPicker" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+
+
+
+
+</resources>

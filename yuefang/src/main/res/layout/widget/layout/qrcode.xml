@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600pt"
+    android:layout_height="680pt"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="313pt"
+        android:layout_height="313pt"
+        android:layout_marginTop="60pt"
+        android:background="@drawable/qrcode" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:text="@string/title10"
+        android:textColor="#e85316"
+        android:textSize="33pt" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:text="@string/title9"
+        android:textColor="#e85316"
+        android:textSize="33pt" />
+
+    <Button
+        android:id="@+id/saveQrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50pt"
+        android:layout_marginTop="40pt"
+        android:layout_marginRight="50pt"
+        android:text="@string/saveQrcode"
+        android:textColor="#a7a7a7"
+        android:textSize="31pt" />
+
+</LinearLayout>

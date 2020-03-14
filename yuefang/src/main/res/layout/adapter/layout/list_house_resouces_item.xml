@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appointItem"
+            layout="@layout/appoint_item"
+            bind:bean="@{bean}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider7" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="@{userType==2?View.VISIBLE:View.GONE}">
+
+            <ImageView
+                android:id="@+id/cb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_cb" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/select_seller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_1"
+                    android:drawablePadding="5pt"
+                    android:paddingLeft="15pt"
+                    android:paddingTop="5dp"
+                    android:paddingRight="15pt"
+                    android:paddingBottom="5pt"
+                    android:text="@string/appointSalepreson"
+                    android:textColor="#fff"
+                    android:textSize="24pt"
+                    android:visibility="@{bean.isActive?View.VISIBLE:View.GONE}"
+                    app:direcation="0"
+                    app:drawable="@drawable/seller"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg_4"
+                    android:paddingLeft="15pt"
+                    android:paddingTop="5pt"
+                    android:paddingRight="15pt"
+                    android:paddingBottom="5pt"
+                    android:text="@{bean.isActive?@string/xj:@string/sj}"
+                    android:textColor="@color/c8"
+                    android:textSize="24pt"
+                    app:direcation="0"
+                    app:drawable="@{bean.isActive?@drawable/xj:@drawable/sj}"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

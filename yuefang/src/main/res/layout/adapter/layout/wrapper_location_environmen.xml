@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="counts"
+            type="int[]" />
+
+        <variable
+            name="mapUtil"
+            type="com.xx.yuefang.util.MapUtil" />
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <TextView
+            style="@style/title"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/nearby" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="115pt"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+
+        <TextView
+            android:id="@+id/lookAll"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_btn1"
+            android:gravity="center"
+            android:text="@string/ckqbpt"
+            android:textColor="@color/navigation2"
+            android:textSize="32pt" />
+
+
+    </LinearLayout>
+</layout>

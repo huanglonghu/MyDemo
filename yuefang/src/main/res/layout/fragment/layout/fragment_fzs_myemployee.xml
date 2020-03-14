@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="isSelectAll"
+            type="boolean" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_login">
+
+            <include
+                android:id="@+id/employee_toolbar"
+                layout="@layout/toolbar6"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/my_employee}" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-80dp"
+            android:layout_marginRight="20dp"
+            android:divider="@drawable/divider8"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_2"
+                android:divider="@drawable/divider7"
+                android:padding="10dp"
+                android:showDividers="middle|end">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/selectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/selectAll"
+                    android:textColor="#000"
+                    android:textSize="25pt"
+                    app:drawable="@{isSelectAll?@drawable/cb4:@drawable/cb3}"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <com.xx.yuefang.ui.customview.ImageTextView
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_1"
+                        android:paddingLeft="15pt"
+                        android:paddingTop="5pt"
+                        android:paddingRight="15pt"
+                        android:paddingBottom="5pt"
+                        android:text="@string/newAdd"
+                        android:textColor="#fff"
+                        android:textSize="25pt"
+                        app:drawable="@drawable/add"
+                        bind:direcation="0"
+                        bind:drawableHeight="5dp"
+                        bind:drawableWidth="5dp" />
+
+                    <com.xx.yuefang.ui.customview.ImageTextView
+                        android:id="@+id/deleteAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_1"
+                        android:paddingLeft="15pt"
+                        android:paddingTop="5pt"
+                        android:paddingRight="15pt"
+                        android:paddingBottom="5pt"
+                        android:text="@string/delete"
+                        android:textColor="#fff"
+                        android:textSize="25pt"
+                        app:drawable="@drawable/delete2"
+                        bind:direcation="0"
+                        bind:drawableHeight="5dp"
+                        bind:drawableWidth="5dp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <com.xx.yuefang.ui.customview.ScrollRefreshListView
+                android:id="@+id/list_myemployee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider7"
+                android:paddingLeft="20pt"
+                android:paddingRight="20pt"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

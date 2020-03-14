@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="750pt"
+        android:background="#000">
+
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false" />
+
+
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="128pt"
+            android:layout_height="128pt"
+            android:layout_centerInParent="true"
+            android:alpha="1"
+            android:src="@drawable/play_circle" />
+
+
+        <LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_play"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zzhc"
+                android:textColor="#fff"
+                android:textSize="28pt" />
+
+            <com.xx.yuefang.ui.customview.VideoLoadingView
+                android:id="@+id/loadingView"
+                android:layout_width="80pt"
+                android:layout_height="80pt" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/fullScreen"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30pt"
+            android:layout_marginBottom="30pt"
+            android:src="@drawable/fullscreen" />
+
+
+    </RelativeLayout>
+</layout>

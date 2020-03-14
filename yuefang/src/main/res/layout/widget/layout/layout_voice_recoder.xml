@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="508pt"
+        android:layout_height="504pt"
+        android:background="@drawable/bg_voice_recoder"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="134pt"
+            android:layout_height="176pt"
+            android:src="@drawable/speech" />
+
+        <ImageView
+            android:id="@+id/db"
+            android:layout_width="120pt"
+            android:layout_height="180pt"
+            android:layout_marginLeft="40pt"
+            android:src="@drawable/voice_level" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="count"
+            type="int" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_login">
+
+
+            <include
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/myfootprint}" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-70dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:drawablePadding="3dp"
+                android:text='@{@string/gll+count+@string/tfy}'
+                android:textColor="#fff"
+                app:direcation="0"
+                app:drawable="@drawable/check"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/navigation"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_2"
+                android:padding="5dp">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/selectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="@string/selectAll"
+                    android:textColor="@color/t3"
+                    app:direcation="0"
+                    app:drawable="@drawable/bg_cb2"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/deleteAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/delete"
+                    android:textColor="#fff"
+                    app:drawable="@drawable/delete2"
+                    bind:direcation="0"
+                    bind:drawableHeight="5dp"
+                    bind:drawableWidth="5dp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/divider8" />
+
+            <ListView
+                android:id="@+id/list_footprint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider8"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

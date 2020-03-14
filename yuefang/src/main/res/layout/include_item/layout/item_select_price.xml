@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="window"
+            type="com.xx.yuefang.ui.widget.RequireWindow" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textColor="#000"
+            android:textSize="32pt" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:divider="@drawable/divider12"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@{position==1?@drawable/shape21:@drawable/shape22}"
+                android:gravity="center"
+                android:onClick="@{(v)->window.togglePrice(v,1)}"
+                android:text="@string/price1"
+                android:textAlignment="center"
+                android:textColor="@{position==1?@color/c8:@color/t1}"
+                android:textSize="22pt" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@{position==2?@drawable/shape21:@drawable/shape22}"
+                android:gravity="center"
+                android:onClick="@{(v)->window.togglePrice(v,2)}"
+                android:text="@string/price2"
+                android:textAlignment="center"
+                android:textColor="@{position==2?@color/c8:@color/t1}"
+                android:textSize="22pt" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@{position==3?@drawable/shape21:@drawable/shape22}"
+                android:gravity="center"
+                android:onClick="@{(v)->window.togglePrice(v,3)}"
+                android:text="@string/price3"
+                android:textAlignment="center"
+                android:textColor="@{position==3?@color/c8:@color/t1}"
+                android:textSize="22pt" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@{position==4?@drawable/shape21:@drawable/shape22}"
+                android:gravity="center"
+                android:onClick="@{(v)->window.togglePrice(v,4)}"
+                android:text="@string/price4"
+                android:textAlignment="center"
+                android:textColor="@{position==4?@color/c8:@color/t1}"
+                android:textSize="22pt" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/custom"
+                android:layout_width="160pt"
+                android:layout_height="30dp"
+                android:background="@{position==5?@drawable/shape21:@drawable/shape22}"
+                android:gravity="center"
+                android:onClick="@{(v)->window.togglePrice(v,5)}"
+                android:text="@string/custom"
+                android:textAlignment="center"
+                android:textColor="@{position==5?@color/c8:@color/t1}"
+                android:textSize="22pt" />
+
+
+            <LinearLayout
+                android:id="@+id/customLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20pt"
+                android:orientation="horizontal"
+                android:visibility="@{position==5?View.VISIBLE:View.GONE}">
+
+                <EditText
+                    android:id="@+id/minPrice"
+                    android:layout_width="160pt"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_7"
+                    android:gravity="center"
+                    android:hint="@string/minPrice"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/tv_color_selector"
+                    android:textSize="22pt" />
+
+                <TextView
+                    android:layout_width="20pt"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="~"
+                    android:textSize="22pt" />
+
+                <EditText
+                    android:id="@+id/maxPrice"
+                    android:layout_width="160pt"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_7"
+                    android:gravity="center"
+                    android:hint="@string/maxPrice"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/tv_color_selector"
+                    android:textSize="22pt" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

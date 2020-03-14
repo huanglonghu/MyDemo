@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="houseTypeInfo"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean.HouseTypeInfosBean" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.HouseMessage.DataBean" />
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.xx.yuefang.ui.customview.ObservableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:gravity="center_horizontal">
+
+            <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/toolbar"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{@string/houseTypeDetail}" />
+
+                <com.xx.yuefang.ui.customview.NoScrollGridView
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:padding="15dp"
+                    android:verticalSpacing="10dp" />
+
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="650pt"
+                    android:layout_height="520pt"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30pt">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:maxLength="9"
+                                android:singleLine="true"
+                                android:text="@{bean.premisesName}"
+                                android:textColor="@color/t2"
+                                android:textSize="32pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:background="@drawable/shape_a"
+                                android:gravity="center"
+                                android:padding="6pt"
+                                android:text="@{houseTypeInfo.houseType}"
+                                android:textColor="#fff"
+                                android:textSize="22pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:background="@drawable/shape4"
+                                android:gravity="center"
+                                android:padding="6pt"
+                                android:text="@{houseTypeInfo.state}"
+                                android:textColor="#fff"
+                                android:textSize="22pt" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20pt"
+                            android:ellipsize="end"
+                            android:maxLength="16"
+                            android:text="@{houseTypeInfo.houseName}"
+                            android:textColor="@color/t1"
+                            android:textSize="32pt" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="20pt"
+                            android:text='@{bean.totalPrice+@string/unit2}'
+                            android:textColor="@color/t7"
+                            android:textSize="32pt" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="72pt"
+                            android:layout_height="72pt"
+                            android:src="@drawable/vrkf1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15pt"
+                            android:text="@string/vrkf"
+                            android:textColor="#e86026"
+                            android:textSize="30pt" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <include layout="@layout/layout_divider2" />
+
+
+                <LinearLayout
+                    android:id="@+id/describe_continer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="35pt">
+
+                    <LinearLayout
+                        android:id="@+id/ll_expend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:divider="@drawable/divider3"
+                        android:orientation="horizontal"
+                        android:showDividers="middle" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35pt"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="top">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/area"
+                                android:textColor="@color/t1"
+                                android:textSize="32pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{houseTypeInfo.area+@string/unit1}"
+                                android:textColor="@color/t2"
+                                android:textSize="32pt" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="top">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cx"
+                                android:textColor="@color/t1"
+                                android:textSize="32pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{houseTypeInfo.orientation}"
+                                android:textColor="@color/t2"
+                                android:textSize="32pt" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30pt"
+                        android:weightSum="2">
+
+
+                        <LinearLayout
+                            android:id="@+id/container1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/container2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"></LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/toConsultation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{userType==4?View.VISIBLE:View.GONE}">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/sfys"
+                            android:textColor="@color/t1"
+                            android:textSize="32pt" />
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/tv1"
+                            android:text="@string/t1"
+                            android:textColor="@color/t7"
+                            android:textSize="32pt" />
+
+                        <ImageView
+                            android:layout_width="15pt"
+                            android:layout_height="25pt"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/back2" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30pt"
+                        android:background="@drawable/shape3a"
+                        android:paddingLeft="13pt"
+                        android:paddingTop="6pt"
+                        android:paddingRight="13pt"
+                        android:paddingBottom="6pt"
+                        android:text="@string/t2"
+                        android:textColor="@color/t5"
+                        android:textSize="22pt"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="165pt"
+                    android:background="@color/t1" />
+
+
+            </LinearLayout>
+
+        </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+        <include
+            layout="@layout/wrapper_onekey_appoint"
+            android:layout_width="match_parent"
+            android:layout_height="145pt"
+            android:layout_gravity="bottom"
+            bind:data="@{data}"
+            bind:presenter="@{presenter}"
+            bind:userType="@{userType}" />
+
+
+    </FrameLayout>
+
+</layout>

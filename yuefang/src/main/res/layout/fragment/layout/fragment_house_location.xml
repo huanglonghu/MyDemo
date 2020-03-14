@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="counts"
+            type="int[]" />
+
+        <variable
+            name="mapUtil"
+            type="com.xx.yuefang.util.MapUtil" />
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title='@{@string/nearby}' />
+
+        <include layout="@layout/layout_divider2" />
+
+        <include
+            android:id="@+id/ll_mapview_head"
+            layout="@layout/ll_mapview_head"
+            bind:counts="@{counts}"
+            bind:mapUtil="@{mapUtil}"
+            bind:selectPosition="@{selectPosition}" />
+
+
+        <RelativeLayout
+            android:id="@+id/mapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/list_adress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+
+        <include
+            layout="@layout/wrapper_onekey_appoint"
+            android:layout_width="match_parent"
+            android:layout_height="145pt"
+            bind:data="@{data}"
+            bind:presenter="@{presenter}"
+            bind:userType="@{userType}" />
+
+    </LinearLayout>
+</layout>

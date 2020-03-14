@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+        <variable
+            name="dialog"
+            type="com.xx.yuefang.ui.widget.OneKeyYueFangDialog" />
+
+        <variable
+            name="appoint"
+            type="com.xx.yuefang.bean.Appoint" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="personNum"
+            type="int" />
+
+        <variable
+            name="area"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="17dp"
+                android:src="@drawable/close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/yykf"
+                android:textColor="#000"
+                android:textSize="35pt" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider1"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:showDividers="middle|end|beginning">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xmmc"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:id="@+id/premisesName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/selectArea"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selectArea"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="160pt"
+                    android:layout_height="76pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center"
+                    android:onClick="@{()->dialog.toggleArea(0)}"
+                    android:text="@string/t5"
+                    android:textColor="@{area==0?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="160pt"
+                    android:layout_height="76pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center"
+                    android:onClick="@{()->dialog.toggleArea(1)}"
+                    android:text="@string/t6"
+                    android:textColor="@{area==1?@color/d1:@color/d2}"
+                    android:textSize="24pt" />
+
+                <TextView
+                    android:layout_width="160pt"
+                    android:layout_height="76pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center"
+                    android:onClick="@{()->dialog.toggleArea(2)}"
+                    android:text="@string/t7"
+                    android:textColor="@{area==2?@color/d1:@color/d2}"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile"
+                    android:textSize="26pt" />
+
+                <com.xx.yuefang.ui.customview.MyEditText
+                    android:id="@+id/mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="@string/hint5"
+                    android:inputType="number"
+                    android:textColor="#000"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:id="@+id/changeMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/editPhone"
+                    android:textColor="@color/c8"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yzmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yzm"
+                    android:textSize="26pt" />
+
+                <com.xx.yuefang.ui.customview.MyEditText
+                    android:id="@+id/yzm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint7"
+                    android:inputType="number"
+                    android:text="@={appoint.code}"
+                    android:textColor="#000"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:id="@+id/getYzm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/fsyzm"
+                    android:textColor="@color/c8"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title8"
+                    android:textSize="26pt" />
+
+                <com.xx.yuefang.ui.customview.MyEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint27"
+                    android:text="@={appoint.userCall}"
+                    android:textColor="#000"
+                    android:textSize="26pt" />
+
+                <RadioGroup
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/xs"
+                        android:textSize="26pt" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ns"
+                        android:textSize="26pt" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kfrs"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->dialog.selectPersonNum(0)}"
+                    android:text="@string/num1"
+                    android:textColor="@{personNum==0?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="@{()->dialog.selectPersonNum(1)}"
+                    android:text="@string/num2"
+                    android:textColor="@{personNum==1?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->dialog.selectPersonNum(2)}"
+                    android:text="@string/num3"
+                    android:textColor="@{personNum==2?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick="@{()->dialog.selectPersonNum(3)}"
+                    android:text="@string/num4"
+                    android:textColor="@{personNum==3?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{()->dialog.selectPersonNum(4)}"
+                    android:text="@string/num5"
+                    android:textColor="@{personNum==4?@color/d1:@color/d2}"
+                    android:textSize="26pt" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sfjs"
+                    android:textSize="26pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="@{()->dialog.selectWay(0)}">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zcjs"
+                            android:textColor="@drawable/tv_color_selector2"
+                            android:textSize="26pt" />
+
+                        <ImageView
+                            android:layout_width="26pt"
+                            android:layout_height="26pt"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/yuyue"
+                            android:visibility="@{selectPosition==0?View.VISIBLE:View.INVISIBLE}" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="@{()->dialog.selectWay(1)}">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zj"
+                            android:textSize="26pt" />
+
+                        <ImageView
+                            android:layout_width="26pt"
+                            android:layout_height="26pt"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/yuyue"
+                            android:visibility="@{selectPosition==1?View.VISIBLE:View.INVISIBLE}" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="@{()->dialog.selectWay(2)}">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other"
+                            android:textSize="26pt" />
+
+                        <ImageView
+                            android:layout_width="26pt"
+                            android:layout_height="26pt"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/yuyue"
+                            android:visibility="@{selectPosition==2?View.VISIBLE:View.INVISIBLE}" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yysj"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:id="@+id/selectTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/selectAppointDate"
+                    android:inputType="datetime"
+                    android:text='@={appoint.reservationTime}'
+                    android:textColor="#000"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape1"
+            android:text="@string/next"
+            android:textColor="#fff"
+            android:textSize="30pt" />
+
+    </LinearLayout>
+</layout>

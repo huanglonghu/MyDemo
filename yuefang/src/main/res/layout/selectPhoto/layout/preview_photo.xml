@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="count"
+            type="int" />
+
+        <variable
+            name="index"
+            type="int" />
+
+
+        <variable
+            name="path"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="165pt"
+            android:background="@drawable/bg_toolbar"
+            android:paddingLeft="30pt"
+            android:paddingTop="80pt"
+            android:paddingRight="30pt">
+
+            <ImageButton
+                android:id="@+id/btn_left"
+                android:layout_width="24pt"
+                android:layout_height="42pt"
+                android:background="@drawable/back3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30pt"
+                android:layout_toRightOf="@id/btn_left"
+                android:text='@{(index+1)+"/"+count}'
+                android:textColor="@android:color/white"
+                android:textSize="35pt" />
+
+            <TextView
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape1"
+                android:paddingLeft="24pt"
+                android:paddingTop="12pt"
+                android:paddingRight="24pt"
+                android:paddingBottom="12pt"
+                android:text="@string/confirm"
+                android:textColor="#fff"
+                android:textSize="28pt" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#303030"
+            android:gravity="right"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:id="@+id/ll_pre_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_item_check"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="6dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon_image_check" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/select"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_main_bottom"
+            android:layout_below="@id/rl_top_bar" />
+
+
+    </RelativeLayout>
+</layout>

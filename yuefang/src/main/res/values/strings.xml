@@ -1,0 +1,576 @@
+<resources>
+    <string name="app_name">约房网</string>
+
+    <string name="hxjs">户型介绍</string>
+    <string name="cancle">取消</string>
+    <string name="confirm">确定</string>
+    <string name="systemNews">系统消息</string>
+    <string name="onlinekf">在线客服</string>
+
+    <string name="addEmployee">添加员工</string>
+    <string name="editEmployee">编辑员工</string>
+
+    <string name="hint1">填写原密码</string>
+    <string name="hint2">填写新密码</string>
+    <string name="hint3">再次填写确认</string>
+    <string name="hint4">向置业顾问提出您的疑问</string>
+    <string name="hint5">请输入手机号</string>
+    <string name="hint6">请输入密码(最少6位,数字+字母)</string>
+    <string name="hint7">请输入验证码</string>
+    <string name="hint8">你觉得该楼盘的位置如何,环境怎么样,配套规划满意吗？</string>
+    <string name="hint9">请输入6-15位数原密码</string>
+    <string name="hint10">请输入6-15位数新密码</string>
+    <string name="hint11">请输入驻场名称</string>
+    <string name="hint12">请选择性别</string>
+    <string name="hint13">请输入登录密码</string>
+    <string name="hint14">请输入微信</string>
+    <string name="hint15">请输入楼盘地址</string>
+    <string name="hint16">请输入员工简介</string>
+    <string name="hint17">搜索你感兴趣的内容</string>
+    <string name="hint18">请输入关键字搜索</string>
+    <string name="hint19">请输入密码</string>
+    <string name="hint20">请输入拒绝原因</string>
+    <string name="hint21">请输入真实姓名</string>
+    <string name="hint22">请输入公司名称</string>
+    <string name="hint23">搜索地点</string>
+    <string name="hint24">请输入要评价的内容</string>
+    <string name="hint25">请输入要搜索的内容</string>
+    <string name="hint26">请输入公司ID</string>
+    <string name="hint27">请输入您的称呼</string>
+    <string name="hint28">请输入评论</string>
+    <string name="hint29">请输入解绑原因</string>
+
+    <string name="jb">解绑</string>
+    <string name="agin">重新绑定</string>
+    <string name="Perfectinformation">完善资料</string>
+
+    <string name="skip">跳过</string>
+
+    <string name="bindcompany">绑定公司 : </string>
+
+
+    <string name="appointSuccess">预约成功</string>
+    <string name="clear">清空</string>
+
+    <string name="sendLocation">发送位置</string>
+
+    <string name="pyq">朋友圈</string>
+    <string name="wxsc">微信收藏</string>
+    <string name="qZone">QQ空间</string>
+    <string name="shareTo">分享到</string>
+
+    <string name="saveQrcode">保存二维码</string>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+    <string name="lkbm">立刻报名</string>
+    <string name="yzm">验证码</string>
+
+    <string name="companyId">公司ID</string>
+
+    <string name="selectArea">选择区域</string>
+    <string name="editPhone">修改手机号</string>
+
+
+    <string name="selectAppointDate">请选择预约时间</string>
+
+
+    <string name="yykf">预约看房</string>
+    <string name="xmmc">项目名称</string>
+
+    <string name="selctDate">选择日期</string>
+
+    <string name="title1">写评论,分享心得</string>
+    <string name="title2">你看过该楼盘吗？</string>
+    <string name="title3">全程免费</string>
+    <string name="title4">专业服务</string>
+    <string name="title5">区域解读</string>
+    <string name="title6">户型分析</string>
+    <string name="title7">请选择取消预约的理由</string>
+    <string name="title8">您的称呼</string>
+    <string name="title9">关注公众号接受预约通知</string>
+    <string name="title10">微信扫描二维码</string>
+    <string name="title11">申请解绑经纪人</string>
+    <string name="da">答</string>
+    <string name="ljdp">立即点评</string>
+
+
+    <string name="m1">结构 : </string>
+    <string name="m2">面积 : </string>
+    <string name="m3">装修 : </string>
+    <string name="m4">户型 : </string>
+    <string name="m5">交房 : </string>
+    <string name="m6">开盘 : </string>
+    <string name="m7">地址 : </string>
+
+    <string name="b1">禁止以后再申请</string>
+    <string name="b2">标注 : 禁止以后再申请</string>
+
+    <string name="m8">解绑对象：</string>
+    <string name="m9">绑定对象: </string>
+    <string name="m10">企业经纪人 : </string>
+    <string name="m11">解绑原因 : </string>
+    <string name="m12">拒绝原因 : </string>
+    <string name="m13">申请时间 : </string>
+
+
+    <string name="wlhd">我来回答</string>
+    <string name="bmcj">包名参加</string>
+
+    <string name="recommend">推荐</string>
+
+    <string name="qdtj">确定提交</string>
+
+    <string name="headLine">头条</string>
+
+    <string name="sdkg">实地看过</string>
+    <string name="wsdkg">未实地看过</string>
+
+    <string name="facebook_app_id">896589280678861</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb896589280678861</string>
+
+    <string name="newsDetail">资讯详情</string>
+
+    <string name="location">位置</string>
+
+    <string name="locationMsg">位置信息</string>
+
+    <string name="xsmc">销售员名称：</string>
+    <string name="xsdh">销售员电话：</string>
+    <string name="reason">预约取消原因：</string>
+
+    <string name="zwyy">暂无预约</string>
+
+    <string name="noIntroduction">暂无简介</string>
+    <string name="profile">简介</string>
+
+
+    <string name="replayDetail">问答详情</string>
+
+    <string name="registerAccount">注册账号</string>
+
+    <string name="ydnum">次阅读</string>
+
+    <string name="nearby">位置周边</string>
+    <string name="ckqbpt">查看全部配套</string>
+    <string name="vrkf">VR看房</string>
+
+    <string name="zxzx">在线咨询</string>
+
+    <string name="video">视频</string>
+
+    <string name="appointSalepreson">指定销售人员</string>
+
+    <string name="search">搜索</string>
+    <string name="hotSearch">热门搜索</string>
+
+    <string name="all">总共</string>
+    <string name="replay">个回答</string>
+    <string name="cancleBind">取消绑定</string>
+    <string name="sqjb">申请解绑</string>
+
+    <string name="bdgs">绑定公司</string>
+
+    <string name="commented">已点评</string>
+    <string name="replay2">人回复</string>
+    <string name="replay3">条回复</string>
+    <string name="hf">回复</string>
+
+    <string name="userName">用户名 : </string>
+    <string name="yjyy">一键预约</string>
+
+    <string name="userReplayed">用户已点评</string>
+    <string name="saleReplayed">销售人员已点评</string>
+    <string name="userNoReplay">用户尚未点评</string>
+    <string name="saleNoReplay">销售人员尚未点评</string>
+
+    <string name="to">至</string>
+
+    <string name="tip1">您还没有点评过</string>
+    <string name="tip2">暂无相关楼盘，搜索其他试试吧</string>
+
+    <string name="shrink">收起</string>
+    <string name="expand">全文</string>
+
+    <string name="selectCity">选择城市</string>
+    <string name="houseTypeDetail">户型详情</string>
+
+    <string name="premisesName">楼盘名称</string>
+    <string name="state">楼盘状态</string>
+    <string name="dynamicDetail">楼盘动态列表</string>
+    <string name="unitPrice">参考均价</string>
+    <string name="totalPrice">参考总价"</string>
+    <string name="propertyType">物业类型</string>
+    <string name="regionalLocation">所属区域</string>
+    <string name="address">楼盘地址</string>
+    <string name="area">面积：</string>
+    <string name="cx">朝向：</string>
+    <string name="sfys">首付预算：</string>
+
+
+    <string name="zxhd">最新活动</string>
+
+    <string name="allPrice">总价</string>
+    <string name="dj">单价</string>
+
+    <string name="creditValue">信用值</string>
+    <string name="backhome">返回首页</string>
+
+    <string name="t1">一键咨询首付及贷款明细</string>
+    <string name="t2">数据仅供参考</string>
+    <string name="t3">其他快捷方式登录</string>
+    <string name="t4">手机快捷登录</string>
+    <string name="t5">国内+86</string>
+    <string name="t6">香港+852</string>
+    <string name="t7">澳门+853</string>
+    <string name="t8">忘记密码</string>
+    <string name="t9">暂无相关内容，搜索其他试试吧</string>
+    <string name="t10">《约房隐私政策》</string>
+    <string name="t11">及</string>
+    <string name="t12">《约房用户服务协议》</string>
+    <string name="t13">投诉建议邮箱：yuefangvip@163.com</string>
+    <string name="t14">注册/登录即代表同意</string>
+    <string name="t15">申请成为合伙人</string>
+    <string name="t16">请上传身份证正反面</string>
+    <string name="t17">申请成为合伙企业</string>
+    <string name="t18">请上传营业执照图片</string>
+    <string name="t19">按住说话</string>
+    <string name="t20">对Ta发送消息</string>
+    <string name="t21">移动和缩放</string>
+    <string name="t22">请点击查看 ></string>
+    <string name="t23">我们尽快与您取得联系</string>
+    <string name="t24">查看楼盘更多信息</string>
+
+    <string name="lookAll">查看全部</string>
+
+    <string name="baseMsg">基本信息</string>
+    <string name="saleMsg">销售信息</string>
+    <string name="xqgk">小区概况</string>
+    <string name="ysxkz">预售许可证</string>
+
+
+    <string name="yypj">预约评价</string>
+    <string name="scale">移动和缩放</string>
+
+    <string name="select">选取</string>
+
+
+    <string name="price">价格</string>
+    <string name="price1">1万/㎡以下</string>
+    <string name="price2">1-2万/㎡</string>
+    <string name="price3">2-3万/㎡</string>
+    <string name="price4">3-4万/㎡</string>
+
+    <string name="picture">图片</string>
+    <string name="zzhc">正在缓冲</string>
+    <string name="selectPhoto">选择图片</string>
+    <string name="yl">预览</string>
+    <string name="xhd">写回答</string>
+
+    <string name="houseType">楼盘户型</string>
+    <string name="openTime">最新开盘</string>
+    <string name="deliveryTime">交房时间</string>
+    <string name="zx">最新</string>
+    <string name="sx">筛选</string>
+
+    <string name="ask">提问</string>
+    <string name="wen">问</string>
+    <string name="comment_premises">评价本楼盘</string>
+    <string name="lpdt">楼盘动态</string>
+    <string name="lppl">楼盘评论</string>
+    <string name="mfwdj">买房问大家</string>
+
+    <string name="cnxh">猜你喜欢</string>
+    <string name="allType">全部户型</string>
+
+
+    <string name="unit1">㎡</string>
+    <string name="unit2">万元/套</string>
+    <string name="unit3">分</string>
+    <string name="unit4">条点评</string>
+    <string name="unit5">元/㎡</string>
+    <string name="unit6">米</string>
+
+    <string name="phone">电话</string>
+    <string name="sex">性别</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+
+    <string name="selectSaleMan">选择现场销售人员</string>
+    <string name="accountMsg">账户信息</string>
+    <string name="name">姓名</string>
+    <string name="nickName">昵称</string>
+
+
+    <string name="bus">公交</string>
+    <string name="education">教育</string>
+    <string name="bank">银行</string>
+    <string name="food">美食</string>
+    <string name="hospital">医院</string>
+    <string name="mall">超市</string>
+
+
+    <string name="psw">密码</string>
+    <string name="tel">电话号码</string>
+    <string name="IdNum">身份证</string>
+    <string name="wyjs">物业介绍</string>
+    <string name="companyName">公司名称</string>
+    <string name="myAppoint">我的预约</string>
+    <string name="look">浏览</string>
+    <string name="allComment">全部评论</string>
+    <string name="zw">正文</string>
+    <string name="tosay">说两句</string>
+    <string name="gll">共浏览了</string>
+    <string name="gsc">共收藏了</string>
+    <string name="tfy">套房源</string>
+    <string name="saleSuccess">共成功卖出了</string>
+    <string name="gyyl">共预约了</string>
+    <string name="loading">加载中</string>
+    <string name="loadCompleted">没有更多的数据了</string>
+
+
+    <string name="setting">设置</string>
+    <string name="grsz">个人设置</string>
+    <string name="editPsw">修改密码</string>
+
+    <string name="jcgx">检查更新</string>
+    <string name="version">版本</string>
+    <string name="qchc">清除缓存</string>
+    <string name="gzzx">规则中心</string>
+    <string name="logout">退出登录</string>
+
+
+    <string name="myfootprint">我的足迹</string>
+    <string name="my_house_resource">我的房源</string>
+    <string name="wdlp">我的楼盘</string>
+    <string name="my_comment">我的点评</string>
+    <string name="myappoint">我的预约</string>
+    <string name="lpyy">楼盘预约</string>
+    <string name="my_employee">我的员工</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="sell_record">卖房成交记录</string>
+    <string name="wdsc">我的收藏</string>
+
+    <string name="wytw">我要提问</string>
+    <string name="cktw">查看提问</string>
+
+    <string name="cj">成交</string>
+    <string name="qrcj">确认成交</string>
+
+
+    <string name="userComment">用户点评</string>
+    <string name="ask_everyone">问大家</string>
+
+    <string name="khxy">客户信用：</string>
+    <string name="yylp">预约楼盘：</string>
+    <string name="yysj">预约时间：</string>
+    <string name="khch">客户称呼：</string>
+    <string name="khdh">客户电话：</string>
+    <string name="kfrs">看房人数：</string>
+    <string name="sfjs">是否接送：</string>
+
+    <string name="num1">1人</string>
+    <string name="num2">2-3人</string>
+    <string name="num3">3-5人</string>
+    <string name="num4">5人以上</string>
+    <string name="num5">待定</string>
+
+    <string name="other">其它</string>
+
+    <string name="xs">先生</string>
+    <string name="ns">女士</string>
+
+    <string name="zcjs">专车接送</string>
+
+    <string name="zj">自驾</string>
+
+
+    <string name="news">消息</string>
+    <string name="ygz">已关注</string>
+    <string name="score">信用值</string>
+
+    <string name="backPsw">找回密码</string>
+    <string name="history_appoint">我的历史预约</string>
+
+
+    <string name="myBankCard">我的银行卡</string>
+    <string name="fillMsg">填写银行卡信息</string>
+    <string name="yzsjh">验证手机号</string>
+    <string name="complete">完成</string>
+    <string name="next">下一步</string>
+
+    <string name="withDraw">提现</string>
+    <string name="withDrawSuccess">提现成功</string>
+
+    <string name="commentDeatil">点评详情</string>
+    <string name="plDetail">评论详情</string>
+
+    <string name="oldPsw">原密码</string>
+    <string name="newPsw">新密码</string>
+    <string name="surePsw">确认密码</string>
+    <string name="newAdd">新增</string>
+    <string name="delete">删除</string>
+
+
+    <string name="acceptAppoint">立即接单</string>
+    <string name="refuseAppoint">拒绝接单</string>
+    <string name="deleteAppoint">删除订单</string>
+    <string name="completeAppoint">完成订单</string>
+    <string name="cancleAppoint">取消订单</string>
+
+    <string name="jm">面积</string>
+
+    <string name="sj">上架</string>
+    <string name="xj">下架</string>
+    <string name="commentDetail">点评详情</string>
+
+    <string name="mpmc">名片名称</string>
+    <string name="dlmm">登录密码</string>
+    <string name="mobile">手机号</string>
+    <string name="email">邮箱</string>
+    <string name="dz">地址</string>
+    <string name="hotCity">热门城市</string>
+
+    <string name="accountLogin">账号登录</string>
+    <string name="dl">登录</string>
+    <string name="zhmmdl">账号密码登录</string>
+    <string name="register">注册</string>
+
+    <string name="dynamic">活动详情</string>
+
+    <string name="home">首页</string>
+
+
+    <string name="store">收藏</string>
+    <string name="stored">已收藏</string>
+
+    <string name="relieveBind">解除绑定</string>
+    <string name="unBind">未绑定</string>
+
+    <string name="myagent">我的经纪人</string>
+    <string name="myfans">我的粉丝</string>
+    <string name="myclient">我的客户</string>
+
+    <string name="salePerson">星熙销售人员</string>
+    <string name="wyyy">我要预约</string>
+
+    <string name="mine">我</string>
+
+    <string name="newscomment">评论</string>
+
+    <string name="newscommentDetail">评论详情</string>
+
+    <string name="readNum">次阅读</string>
+
+    <string name="noComment">暂无评论</string>
+
+    <string name="noqa">暂无提问</string>
+
+    <string name="zcmc">驻场名称</string>
+
+    <string name="nodynamic">暂无楼盘动态</string>
+
+    <string name="premises">楼盘</string>
+
+    <string name="fb">发布</string>
+
+    <string name="selectPremises">选择楼盘</string>
+
+    <string name="noAppoint">暂无预约数据</string>
+
+    <string name="noType">暂无楼盘户型</string>
+
+    <string name="photograph">相册</string>
+    <string name="takePhoto">拍摄</string>
+    <string name="shareLocation">分享位置</string>
+    <string name="cyy">常用语</string>
+
+    <string name="share">分享</string>
+
+
+    <!--自定义相册-->
+    <string name="image_selector_finish">Finish</string>
+    <string name="image_selector_preview">Preview</string>
+    <string name="image_selector_authorization_failed">Authorization failed</string>
+    <string name="image_selector_limit_of_img_error">You can only select up to %1$d photos</string>
+
+
+    <string name="RenovationType">装修标准</string>
+    <string name="PropertyRightYears">产权年限</string>
+    <string name="slbdh">售楼部电话</string>
+    <string name="sldz">售楼地址</string>
+    <string name="smds">售卖栋数</string>
+    <string name="smhx">售卖户型</string>
+
+    <string name="edit">编辑</string>
+
+
+    <string name="ysz">预售证</string>
+    <string name="fzsj">发证时间</string>
+    <string name="bdld">绑定楼栋</string>
+
+    <string name="ckdp">查看点评</string>
+    <string name="wydp">我要点评</string>
+
+    <string name="khpf">客户评分</string>
+    <string name="fwpj">服务评价</string>
+
+    <string name="pj">评价</string>
+
+    <string name="parterRegister">合伙人注册</string>
+
+    <string name="review">我的审核</string>
+
+    <string name="sqr">申请人 : </string>
+
+    <string name="unBindReview">解绑审核</string>
+    <string name="bindReview">绑定审核</string>
+
+    <string name="noReview">暂无审核信息</string>
+
+    <string name="agreeBind">同意绑定</string>
+    <string name="refuseBind">拒绝绑定</string>
+
+    <string name="agreeUnBind">同意解绑</string>
+    <string name="refuseUnBind">拒绝解绑</string>
+
+    <string name="sqbdgs">申请绑定公司</string>
+
+    <string name="send">发送</string>
+    <string name="weChat">微信</string>
+    <string name="wxgzh">微信公众号</string>
+
+    <string name="selectAll">全选</string>
+
+    <string name="cjxz">场景选择</string>
+    <string name="xzygwtw">向置业顾问提问</string>
+
+    <string name="fsyzm">发送验证码</string>
+    <string name="commit">提交</string>
+
+    <string name="custom">自定义</string>
+    <string name="minPrice">最低价格</string>
+    <string name="maxPrice">最高价格</string>
+    <string name="save">保存</string>
+
+    <string name="yy">预约</string>
+
+    <string name="detail">详情</string>
+    <string name="setPwd">设置密码</string>
+
+
+    <string name="policyContent1">感谢您选择使用约房网！我们做了诸多有利于保护个人信息的努力，在使用我们的服务前，请阅读并同意</string>
+    <string name="policyContent2">，了解个人信息的使用情况与自主选择的权利。</string>
+    <string name="policyContent3">我们将严格按照《约房隐私政策》和《约房用户服务协议》为您提供服务，并以专业的技术为您的信息安全保驾护航。</string>
+    <string name="policy">《约房隐私政策》</string>
+    <string name="policy2">《约房用户服务协议》</string>
+
+
+    <string name="refuse">拒绝</string>
+    <string name="agree">同意</string>
+    <string name="fwxy">服务协议</string>
+    <string name="yszc">隐私政策</string>
+
+</resources>

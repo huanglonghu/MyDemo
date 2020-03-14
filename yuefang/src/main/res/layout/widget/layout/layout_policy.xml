@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="content"
+            type="String" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_11"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="63pt"
+            android:paddingRight="63pt">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="67pt"
+                android:text="用户协议及隐私政策"
+                android:textColor="#000"
+                android:textSize="40pt" />
+
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43pt"
+                android:layout_marginBottom="67pt"
+                android:clickable="true"
+                android:textColor="@color/t13"
+                android:textSize="32pt" />
+
+
+        </LinearLayout>
+
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider1"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/refuse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="30pt"
+                android:paddingBottom="30pt"
+                android:text="@string/refuse"
+                android:textColor="@color/d2"
+                android:textSize="30pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="30pt"
+                android:paddingBottom="30pt"
+                android:text="@string/agree"
+                android:textColor="@color/c8"
+                android:textSize="30pt"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

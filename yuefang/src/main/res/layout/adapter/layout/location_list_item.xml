@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="poinfo"
+            type="com.baidu.mapapi.search.core.PoiInfo" />
+
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{poinfo.name}'
+            android:textColor="@color/t2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text='@{poinfo.address}'
+            android:textColor="@color/t1"
+            android:textSize="17sp" />
+
+        <com.xx.yuefang.ui.customview.ImageTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:text='@{poinfo.distance+""}'
+            app:direcation="0"
+            app:drawable="@drawable/adress"
+            app:drawableHeight="5dp"
+            app:drawableWidth="5dp" />
+
+    </LinearLayout>
+</layout>

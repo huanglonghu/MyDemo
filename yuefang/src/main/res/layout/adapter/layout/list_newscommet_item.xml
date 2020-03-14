@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.NewsCommentBean" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30pt"
+        android:paddingRight="30pt">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30pt">
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="66pt"
+                android:layout_height="66pt"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15pt"
+                android:layout_toRightOf="@id/head"
+                android:text="@{bean.userName}"
+                android:textColor="#000"
+                android:textSize="28pt" />
+
+
+            <LinearLayout
+                android:id="@+id/rise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(bean.rise)}"
+                    android:textColor="#000"
+                    android:textSize="25pt" />
+
+                <ImageView
+                    android:layout_width="36pt"
+                    android:layout_height="36pt"
+                    android:layout_marginLeft="12pt"
+                    android:src="@{bean.isRise?@drawable/rise1:@drawable/rise2}" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="81pt"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20pt"
+                android:text="@{bean.content}"
+                android:textColor="#000"
+                android:textSize="32pt" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{bean.creationTime}"
+                    android:textColor="#999999"
+                    android:textSize="24pt" />
+
+
+                <TextView
+                    android:id="@+id/reply"
+                    android:layout_width="112pt"
+                    android:layout_height="52pt"
+                    android:layout_marginLeft="28pt"
+                    android:background="@drawable/bj_reply"
+                    android:gravity="center"
+                    android:text="@string/hf"
+                    android:visibility="@{bean.isComment?View.VISIBLE:View.GONE}"
+                    android:textColor="#999999"
+                    android:textSize="24pt" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/container_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:layout_marginBottom="30pt"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_divider2" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title="@{@string/systemNews}" />
+
+        <ListView
+            android:id="@+id/list_systemnews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/t6"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+</layout>

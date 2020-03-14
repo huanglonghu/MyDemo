@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.SalePresonList.DataBean" />
+
+    </data>
+
+    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="680pt"
+        android:layout_height="360pt">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_select_seller"
+            android:gravity="right"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="66pt"
+                    android:layout_marginRight="30pt"
+                    android:gravity="center_vertical"
+                    android:text="@{data.companyName}"
+                    android:textColor="#000"
+                    android:textSize="24pt" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="108pt">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{data.businessCardName}"
+                            android:textColor="#000"
+                            android:textSize="26pt" />
+
+                        <TextView
+                            android:id="@+id/gradeType"
+                            android:layout_width="62pt"
+                            android:layout_height="32pt"
+                            android:layout_marginTop="10pt"
+                            android:gravity="center"
+                            android:text="@{data.gradeType}"
+                            android:textColor="#fff"
+                            android:textSize="17pt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="20pt"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/chat"
+                            android:layout_width="62pt"
+                            android:layout_height="62pt"
+                            android:src="@drawable/chat" />
+
+                        <ImageView
+                            android:id="@+id/phone"
+                            android:layout_width="62pt"
+                            android:layout_height="62pt"
+                            android:layout_marginLeft="20pt"
+                            android:src="@drawable/phone4" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="10pt"
+                    android:layout_weight="1"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="@{data.telephone}"
+                    android:textColor="@color/t2"
+                    android:textSize="24pt"
+                    app:direcation="2"
+                    app:drawable="@drawable/phone"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="10pt"
+                    android:layout_weight="1"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="@{data.email}"
+                    android:textColor="@color/t2"
+                    android:textSize="24pt"
+                    app:direcation="2"
+                    app:drawable="@drawable/wechatid"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="10pt"
+                    android:layout_weight="1"
+                    android:drawablePadding="3dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@{data.address}"
+                    android:textColor="@color/t2"
+                    android:textSize="24pt"
+                    app:direcation="2"
+                    app:drawable="@drawable/adress"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>

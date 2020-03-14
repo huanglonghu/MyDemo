@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="newsCount"
+            type="int" />
+
+        <variable
+            name="newsCount2"
+            type="int" />
+
+
+        <variable
+            name="news"
+            type="com.xx.yuefang.bean.SystemNews.DataBeanX.DataBean" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="75pt"
+            android:layout_marginBottom="27pt"
+            android:text="@string/news"
+            android:textColor="#000"
+            android:textSize="32pt"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20pt"
+            android:background="@color/divider3" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/systemNews"
+                android:layout_width="match_parent"
+                android:layout_height="150pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="30pt">
+
+                <ImageView
+                    android:layout_width="100pt"
+                    android:layout_height="100pt"
+                    android:src="@drawable/systemnews" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20pt"
+                    android:orientation="vertical"
+                    android:paddingTop="32pt"
+                    android:paddingRight="30pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/systemNews"
+                            android:textColor="@color/t2"
+                            android:textSize="32pt"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="@{news.creationTime}"
+                            android:textColor="@color/t1"
+                            android:textSize="22pt" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="15pt"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxEms="15"
+                            android:maxLines="1"
+                            android:text="@{news.context}"
+                            android:textColor="@color/t1"
+                            android:textSize="28pt" />
+
+                        <com.xx.yuefang.ui.customview.NewsView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_alignParentRight="true"
+                            android:visibility="@{newsCount==0?View.GONE:View.VISIBLE}"
+                            app:numText='@{newsCount+""}'
+                            app:reduis="8dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/divider2" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/converstation"
+                android:layout_width="match_parent"
+                android:layout_height="150pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="30pt">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="100pt"
+                    android:layout_height="100pt"
+                    android:src="@drawable/kfnews" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20pt"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="32pt"
+                    android:paddingRight="30pt">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/onlinekf"
+                            android:textColor="@color/t2"
+                            android:textSize="32pt"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/date2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/t1"
+                            android:textSize="22pt" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="15pt"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/content2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxEms="15"
+                            android:maxLines="1"
+                            android:textColor="@color/t1"
+                            android:textSize="28pt" />
+
+                        <com.xx.yuefang.ui.customview.NewsView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_alignParentRight="true"
+                            android:visibility="@{newsCount2==0?View.GONE:View.VISIBLE}"
+                            app:numText='@{newsCount2+""}'
+                            app:reduis="8dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/divider2" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_conversarion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+</layout>

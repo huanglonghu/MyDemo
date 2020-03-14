@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean.PremisesNewsInfosBean" />
+
+        <variable
+            name="state"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.creationTime}"
+            android:textColor="@color/t3"
+            android:textSize="30pt" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25pt">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40pt"
+                android:background="#028dec"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="5pt"
+                android:singleLine="true"
+                android:text="@{data.title}"
+                android:textColor="#fff"
+                android:textSize="30pt"
+                android:textStyle="bold" />
+
+
+            <com.xx.yuefang.ui.customview.ExpandableTextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="40pt"
+                android:layout_marginTop="25pt"
+                android:textSize="28pt" />
+
+
+            <TextView
+                android:id="@+id/toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content"
+                android:layout_marginLeft="40pt"
+                android:gravity="center"
+                android:text="@{state==1?@string/shrink:@string/expand}"
+                android:textColor="@color/c8"
+                android:textSize="32pt" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/content"
+                android:layout_alignBottom="@id/toggle"
+                android:layout_marginLeft="5pt"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="21pt"
+                    android:layout_height="21pt"
+                    android:background="@drawable/circle" />
+
+                <ImageView
+                    android:layout_width="1pt"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/line" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

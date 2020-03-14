@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_4"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@null"
+    android:gravity="center"
+    android:paddingLeft="20pt"
+    android:paddingRight="20pt"
+    android:textColor="@drawable/select_tab_text"
+    android:textSize="31pt" />

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.house.HouseArFragment" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="130pt"
+        android:layout_height="130pt">
+
+
+        <ImageView
+            android:id="@+id/ivvr"
+            android:layout_width="130pt"
+            android:layout_height="130pt"
+            android:background="@drawable/ar_selector"
+            android:padding="5pt"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/img_loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@anim/loadmore"
+            android:indeterminateDuration="2000" />
+
+        <TextView
+            android:id="@+id/vrName"
+            android:layout_width="match_parent"
+            android:layout_height="34pt"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_ar"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_margin="5pt"
+            android:textSize="18pt" />
+
+
+    </RelativeLayout>
+
+
+</layout>
+

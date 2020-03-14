@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="150pt"
+            android:paddingTop="80pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40pt"
+                android:layout_height="55pt"
+                android:layout_marginLeft="20pt"
+                android:padding="10pt"
+                android:src="@drawable/left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20pt"
+                android:text="@string/locationMsg"
+                android:textColor="@color/t2"
+                android:textSize="31pt" />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/lcoation"
+                android:layout_width="90pt"
+                android:layout_height="90pt"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="30pt"
+                android:layout_marginBottom="30pt"
+                android:background="@drawable/bg_location" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="167pt"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="40pt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"["+@string/location+"]"}'
+                android:textColor="@color/t2"
+                android:textSize="32pt" />
+
+            <TextView
+                android:id="@+id/adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22pt"
+                android:textColor="@color/d2"
+                android:textSize="29pt" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

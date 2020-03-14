@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="appointDetail"
+            type="com.xx.yuefang.bean.AppointDetail.DataBean" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+
+    </data>
+
+    <com.xx.yuefang.ui.customview.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/b7">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_login">
+
+
+                <include
+                    layout="@layout/toolbar3"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{@string/myAppoint}" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.xx.yuefang.ui.customview.ImageTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:text="@{appointDetail.state}"
+                        android:textColor="#fff"
+                        android:textSize="26pt"
+                        app:drawable="@drawable/state"
+                        app:drawableHeight="5dp"
+                        app:drawableWidth="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@{appointDetail.reservationTime}"
+                        android:textColor="#fff"
+                        android:textSize="22pt" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cotainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:background="@drawable/bg_2">
+
+                    <include
+                        android:id="@+id/appointItem"
+                        layout="@layout/appoint_item"
+                        bind:bean="@{bean}" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/divider8" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_5"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40pt"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/khxy"
+                            android:textColor="@color/t3"
+                            android:textSize="24pt" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/yylp}"
+                        bind:value="@{appointDetail.premisesName}" />
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/yysj}"
+                        bind:value="@{appointDetail.reservationTime}" />
+
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/khch}"
+                        bind:value="@{appointDetail.userCall}" />
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/khdh}"
+                        bind:value="@{appointDetail.phoneNumber}" />
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/kfrs}"
+                        bind:value="@{String.valueOf(appointDetail.lookHouseNumber)}" />
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/sfjs}"
+                        bind:value="@{appointDetail.isPickUp}" />
+
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/xsmc}"
+                        bind:value="@{appointDetail.businessCardName}" />
+
+
+                    <include
+                        layout="@layout/ll_item"
+                        bind:key="@{@string/xsdh}"
+                        bind:value="@{appointDetail.SPhoneNumber}" />
+
+
+                    <include
+                        layout="@layout/ll_item"
+                        android:visibility="@{appointDetail.remarks==null?View.GONE:View.VISIBLE}"
+                        bind:key="@{@string/reason}"
+                        bind:value="@{appointDetail.remarks}" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/divider8" />
+
+                    <LinearLayout
+                        android:id="@+id/option_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divider3"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:showDividers="middle" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+
+</layout>

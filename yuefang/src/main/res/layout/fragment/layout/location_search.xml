@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180pt"
+            android:background="#ededed"
+
+            >
+
+            <ImageView
+                android:layout_width="40pt"
+                android:layout_height="55pt"
+                android:layout_marginTop="100pt"
+                android:layout_marginLeft="20pt"
+                android:padding="10pt"
+                android:src="@drawable/left" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="55pt"
+                android:layout_marginTop="100pt"
+                android:layout_marginLeft="30pt"
+                android:background="@null"
+                android:hint="@string/hint23"
+                android:textSize="30pt" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_location_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="60pt"
+            android:paddingLeft="25pt"
+            android:paddingRight="25pt"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+</layout>

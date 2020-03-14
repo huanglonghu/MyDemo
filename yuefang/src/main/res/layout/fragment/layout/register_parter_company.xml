@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+
+        <variable
+            name="parterRegisterBody"
+            type="com.xx.yuefang.bean.ParterRegisterBody" />
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b7"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="456pt"
+                android:background="@drawable/bg_login">
+
+                <include
+                    android:id="@+id/login_toolbar"
+                    layout="@layout/toolbar4"
+                    app:presenter="@{presenter}"
+                    app:title="@{@string/registerAccount}" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="-70dp"
+                android:layout_marginRight="30pt"
+                android:background="@drawable/shape13"
+                android:orientation="vertical"
+                android:paddingLeft="25pt"
+                android:paddingRight="25pt">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105pt">
+
+
+                    <TextView
+                        android:id="@+id/parter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@{selectPosition==0?@drawable/bg_tv2:@drawable/bg_tv3}"
+                        android:gravity="center"
+                        android:text="个人"
+                        android:textColor="@{selectPosition==0?@color/c8:@color/t2}"
+                        android:textSize="32pt" />
+
+                    <TextView
+                        android:id="@+id/company"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="企业"
+                        android:background="@{selectPosition==1?@drawable/bg_tv2:@drawable/bg_tv3}"
+                        android:textColor="@{selectPosition==1?@color/c8:@color/t2}"
+                        android:textSize="32pt" />
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/register_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

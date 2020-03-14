@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="accountBean"
+            type="com.xx.yuefang.bean.AccountBean" />
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.me.AccountMsg" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="110pt"
+        android:onClick="@{(v)->fragment.editAccount(accountBean)}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={accountBean.name}"
+                android:textColor="@color/f1"
+                android:textSize="24pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:text="@={accountBean.value}"
+                android:textColor="@color/f2"
+                android:textSize="26pt" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="25pt"
+            android:layout_height="25pt"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/jtt" />
+
+
+    </RelativeLayout>
+</layout>

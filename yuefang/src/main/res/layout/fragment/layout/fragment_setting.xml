@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b7">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="330pt"
+                android:background="@drawable/bg_login">
+
+                <include
+                    layout="@layout/toolbar3"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{@string/setting}" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="254pt"
+                android:layout_marginRight="30pt"
+                android:background="@drawable/shape13"
+                android:divider="@drawable/divider_account"
+                android:orientation="vertical"
+                android:paddingLeft="20pt"
+                android:paddingTop="100pt"
+                android:paddingRight="20pt"
+                android:paddingBottom="100pt"
+                android:showDividers="middle|end">
+
+                <RelativeLayout
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/grsz"
+                        android:textColor="#000"
+                        android:textSize="26pt" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/back2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/jcgx"
+                        android:textColor="#000"
+                        android:textSize="26pt" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/back2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/version"
+                        android:textColor="#000"
+                        android:textSize="26pt" />
+
+                    <TextView
+                        android:id="@+id/version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="26pt" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="@{userType==5?View.VISIBLE:View.GONE}">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/companyId"
+                        android:textColor="#000"
+                        android:textSize="26pt" />
+
+                    <TextView
+                        android:id="@+id/companyId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="26pt" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/clean_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/qchc"
+                        android:textColor="#000"
+                        android:textSize="26pt" />
+
+                    <TextView
+                        android:id="@+id/cache_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="26pt" />
+
+                </RelativeLayout>
+
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/rule"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:text="@string/gzzx"-->
+<!--                        android:textColor="#000"-->
+<!--                        android:textSize="26pt" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:src="@drawable/back2" />-->
+
+<!--                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="130pt"
+                android:layout_below="@id/ll"
+                android:layout_marginTop="100pt"
+                android:background="@drawable/shape16"
+                android:gravity="center"
+                android:text="@string/logout"
+                android:textColor="@color/t3"
+                android:textSize="28pt" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30pt"
+                android:gravity="center_vertical"
+                android:text="@string/t13"
+                android:textSize="30pt" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30pt">
+
+
+                <TextView
+                    android:id="@+id/fwxy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20pt"
+                    android:autoLink="all"
+                    android:background="@drawable/bg_under_line"
+                    android:gravity="center_vertical"
+                    android:text="@string/fwxy"
+                    android:textColor="@color/c8"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textColor="@color/c8"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/yszc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20pt"
+                    android:background="@drawable/bg_under_line"
+                    android:gravity="center_vertical"
+                    android:text="@string/yszc"
+                    android:textColor="@color/c8"
+                    android:textSize="30pt" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="176pt" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="newsBean"
+            type="com.xx.yuefang.bean.NewsList.DataBeanX.DataBean" />
+
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp">
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="250pt"
+            android:layout_height="200pt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200pt"
+            android:layout_marginLeft="20pt">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{newsBean.title}"
+                android:textColor="@color/t2"
+                android:textSize="32pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@{newsBean.creationTime}"
+                android:textColor="@color/t1"
+                android:textSize="26pt" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="@{newsBean.number+@string/readNum}"
+                android:textColor="@color/t1"
+                android:textSize="26pt" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

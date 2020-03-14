@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="user"
+            type="com.xx.yuefang.database.entity.UserBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <com.xx.yuefang.ui.customview.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="420pt"
+                    android:background="@drawable/bg_member"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="148pt">
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{user.userType==2||user.userType==5?user.commanyName:(user.userType==4?user.nickName:user.businessCardName)}"
+                            android:textColor="#fff"
+                            android:textSize="34pt"
+                            android:textStyle="bold" />
+
+                        <com.xx.yuefang.ui.customview.ImageTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/userName"
+                            android:layout_marginTop="10pt"
+                            android:text="@{user.phoneNumber}"
+                            android:textColor="#fff"
+                            app:direcation="0"
+                            app:drawable="@drawable/phonenum"
+                            app:drawableHeight="5dp"
+                            app:drawableWidth="5dp" />
+
+
+                        <ImageView
+                            android:id="@+id/setting"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/setting" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/edit_user"
+                        android:layout_width="63pt"
+                        android:layout_height="63pt"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="258pt"
+                        android:src="@drawable/edit_user" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="169pt"
+                    android:layout_height="169pt"
+                    android:layout_marginLeft="48pt"
+                    android:layout_marginTop="286pt"
+                    android:background="@drawable/bg_head1"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/ll_userMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="350pt"
+                    android:layout_marginRight="47pt"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50pt"
+                    android:layout_marginRight="50pt">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{user.userType==2?@string/lpyy:@string/myappoint}"
+                        android:textColor="#000"
+                        android:textSize="28pt" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/first_appoint_cotainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="245pt"
+                    android:layout_marginLeft="30pt"
+                    android:layout_marginRight="30pt"
+                    android:background="@drawable/shape16"
+                    android:padding="30pt">
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingLeft="50pt"
+                android:paddingTop="10dp"
+                android:paddingRight="50pt"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_cotainer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="195pt"
+                    android:orientation="horizontal"
+                    android:weightSum="3" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cotainer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="195pt"
+                    android:layout_marginTop="30pt"
+                    android:orientation="horizontal"
+                    android:weightSum="3" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+
+</layout>

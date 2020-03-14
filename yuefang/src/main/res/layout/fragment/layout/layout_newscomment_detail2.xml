@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title="@{@string/newscommentDetail}" />
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <ListView
+            android:id="@+id/lv_newsCommentReplay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+</layout>

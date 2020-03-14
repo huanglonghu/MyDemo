@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.me.EditAccountMsg" />
+
+        <variable
+            name="area"
+            type="int" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/selectArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="200pt"
+                android:layout_height="80pt"
+                android:background="@drawable/shape18"
+                android:gravity="center"
+                android:onClick="@{(v)->fragment.toggleArea(v,0)}"
+                android:text="@string/t5"
+                android:textColor="@{area==0?@color/d1:@color/d2}"
+                android:textSize="26pt" />
+
+            <TextView
+                android:layout_width="200pt"
+                android:layout_height="80pt"
+                android:background="@drawable/shape18"
+                android:gravity="center"
+                android:onClick="@{(v)->fragment.toggleArea(v,1)}"
+                android:text="@string/t6"
+                android:textColor="@{area==1?@color/d1:@color/d2}"
+                android:textSize="24pt" />
+
+            <TextView
+                android:layout_width="200pt"
+                android:layout_height="80pt"
+                android:background="@drawable/shape18"
+                android:gravity="center"
+                android:onClick="@{(v)->fragment.toggleArea(v,2)}"
+                android:text="@string/t7"
+                android:textColor="@{area==2?@color/d1:@color/d2}"
+                android:textSize="24pt" />
+
+        </LinearLayout>
+
+
+
+        <com.xx.yuefang.ui.customview.MyEditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:background="@drawable/shape18"
+            android:hint="请输入新的手机号码"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:paddingLeft="40pt"
+            android:textSize="31pt" />
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape1"
+            android:onClick="@{(v)->fragment.save(v)}"
+            android:text="保存"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.ReViewResponse.DataBeanX.DataBean" />
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider1"
+        android:orientation="vertical"
+        android:padding="20pt"
+        android:showDividers="middle">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60pt"
+            android:paddingTop="5pt">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.creationTime}"
+                android:textColor="@color/t1"
+                android:textSize="22pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{data.applyTypeStr}"
+                android:textColor="@color/c8"
+                android:textSize="24pt" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15pt">
+
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="90pt"
+                android:layout_height="90pt" />
+
+
+            <LinearLayout
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10pt"
+                android:layout_toRightOf="@id/head">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userName"
+                    android:textColor="@color/t10"
+                    android:textSize="25pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{data.userName}"
+                    android:textColor="@color/t2"
+                    android:textSize="25pt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="10pt"
+                android:layout_marginTop="8pt"
+                android:layout_toRightOf="@id/head"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="45pt"
+                    android:layout_height="45pt"
+                    android:src="@drawable/phone5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7pt"
+                    android:text="@{data.phoneNumber}"
+                    android:textColor="@color/t10"
+                    android:textSize="21pt" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="19pt"
+                android:layout_height="30pt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back2" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.NewsDetailBean.DataBean" />
+
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <include
+                layout="@layout/toolbar"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/newsDetail}" />
+
+            <include layout="@layout/layout_divider2" />
+
+            <com.xx.yuefang.ui.customview.ObservableScrollView
+                android:id="@+id/srcollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="84pt"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{bean.title}"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{bean.author}"
+                                android:textColor="@color/c3"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text='@{bean.creationTime}'
+                                android:textColor="@color/t1"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/look"
+                                android:textColor="@color/t1"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text='@{bean.number+""}'
+                                android:textColor="@color/t1"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <com.xx.yuefang.ui.customview.MyWebView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp" />
+                </LinearLayout>
+            </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84pt"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bj_comment_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="20pt"
+            android:paddingRight="20pt">
+
+
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="488pt"
+                android:layout_height="64pt"
+                android:background="@drawable/bj_comment"
+                android:gravity="center_vertical"
+                android:paddingLeft="18pt">
+
+                <ImageView
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:src="@drawable/writecommet" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="18pt"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/tosay"
+                    android:textSize="30pt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/toComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27pt"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="52pt"
+                    android:layout_height="44pt"
+                    android:src="@drawable/commentshare2" />
+
+
+                <TextView
+                    android:id="@+id/commentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10pt"
+                    android:text="@{String.valueOf(bean.commentNumber)}"
+                    android:textColor="#000"
+                    android:textSize="28pt" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="42pt"
+                android:layout_height="42pt"
+                android:layout_marginLeft="40pt"
+                android:src="@drawable/commentshare" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</layout>

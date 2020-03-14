@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_appoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20pt"
+        android:paddingTop="30pt"
+        android:paddingRight="20pt"
+        android:paddingBottom="20pt">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="210pt"
+            android:layout_height="165pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv"
+            android:layout_alignBottom="@id/iv"
+            android:layout_marginLeft="28pt"
+            android:layout_toRightOf="@id/iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/premisesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{bean.premisesName}"
+                android:textColor="#000"
+                android:textSize="34pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text='@{bean.propertyType+"  "+bean.region+"-"+bean.address}'
+                android:textSize="22pt" />
+
+            <LinearLayout
+                android:id="@+id/llexpend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8pt"
+                android:divider="@drawable/divider3"
+                android:orientation="horizontal"
+                android:showDividers="middle" />
+
+            <com.xx.yuefang.ui.customview.PartTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                app:part1Color="@color/c3"
+                app:part1Size="26pt"
+                app:part1Text="@{bean.averagePrice+@string/unit5}"
+                app:part2Color="@color/t3"
+                app:part2Size="24pt"
+                app:part2Text="@{@string/jm+bean.constructionArea+@string/unit1}"
+                app:textPadding="10pt" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+
+        <variable
+            name="updateUser"
+            type="com.xx.yuefang.bean.UpdateUser" />
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.me.AccountMsg" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="com.xx.yuefang.database.entity.UserBean" />
+
+        <variable
+            name="sex"
+            type="String" />
+
+
+    </data>
+
+
+    <com.xx.yuefang.ui.customview.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b7"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="465pt"
+                android:background="@drawable/bg_login">
+
+                <include
+                    layout="@layout/toolbar3"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{@string/accountMsg}" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-185pt"
+                android:paddingLeft="30pt"
+                android:paddingRight="30pt">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="77pt"
+                    android:background="@drawable/shape13"
+                    android:orientation="vertical"
+                    android:paddingLeft="20pt"
+                    android:paddingTop="180pt"
+                    android:paddingRight="20pt"
+                    android:paddingBottom="72pt">
+
+                    <LinearLayout
+                        android:id="@+id/ll_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divider_account"
+                        android:orientation="vertical"
+                        android:showDividers="middle|end" />
+
+                    <RelativeLayout
+                        android:id="@+id/changePsw"
+                        android:layout_width="match_parent"
+                        android:layout_height="110pt"
+                        android:layout_below="@id/ll_container">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="修改密码"
+                            android:textColor="@color/f1"
+                            android:textSize="26pt" />
+
+
+                        <ImageView
+                            android:layout_width="25pt"
+                            android:layout_height="25pt"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/jtt" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/divider_account" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="154pt"
+                        android:layout_height="154pt">
+
+                        <ImageView
+                            android:id="@+id/iv_head"
+                            android:layout_width="154pt"
+                            android:layout_height="154pt"
+                            android:background="@drawable/bg_head" />
+
+                        <ImageView
+                            android:layout_width="47pt"
+                            android:layout_height="47pt"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/camera" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25pt"
+                        android:text="更改头像"
+                        android:textColor="@color/t3"
+                        android:textSize="25pt" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="40pt"
+                android:layout_marginBottom="18pt"
+                android:text="账号绑定"
+                android:textColor="@color/f1"
+                android:textSize="31pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30pt"
+                android:layout_marginRight="30pt"
+                android:layout_marginBottom="60pt"
+                android:background="@drawable/shape13"
+                android:divider="@drawable/divider_account"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110pt"
+                    android:onClick="@{()->fragment.bindOption(1,user.isbindWeChat)}"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt">
+
+
+                    <ImageView
+                        android:id="@+id/wx"
+                        android:layout_width="70pt"
+                        android:layout_height="70pt"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_wx" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13pt"
+                        android:layout_toRightOf="@id/wx"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weChat"
+                            android:textColor="@color/f1"
+                            android:textSize="24pt" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{user.isbindWeChat?@string/relieveBind:@string/unBind}"
+                            android:textColor="@color/t2"
+                            android:textSize="27pt" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="25pt"
+                        android:layout_height="25pt"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/jtt" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/wxgzh"
+                    android:layout_width="match_parent"
+                    android:layout_height="110pt"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt"
+                    android:visibility="@{user.userType==3?View.VISIBLE:View.GONE}">
+
+
+                    <ImageView
+                        android:id="@+id/iv"
+                        android:layout_width="70pt"
+                        android:layout_height="70pt"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_wx" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13pt"
+                        android:layout_toRightOf="@id/iv"
+                        android:text="@string/wxgzh"
+                        android:textColor="@color/f1"
+                        android:textSize="24pt" />
+
+                    <ImageView
+                        android:layout_width="25pt"
+                        android:layout_height="25pt"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/jtt" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110pt"
+                    android:onClick="@{()->fragment.bindOption(2,user.isbindQQ)}"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt">
+
+
+                    <ImageView
+                        android:id="@+id/qq"
+                        android:layout_width="70pt"
+                        android:layout_height="70pt"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_qq" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13pt"
+                        android:layout_toRightOf="@id/qq"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QQ"
+                            android:textColor="@color/f1"
+                            android:textSize="24pt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{user.isbindQQ?@string/relieveBind:@string/unBind}"
+                            android:textColor="@color/t2"
+                            android:textSize="27pt" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="25pt"
+                        android:layout_height="25pt"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/jtt" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110pt"
+                    android:onClick="@{()->fragment.bindOption(3,user.isbindFacebook)}"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt">
+
+
+                    <ImageView
+                        android:id="@+id/fb"
+                        android:layout_width="70pt"
+                        android:layout_height="70pt"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/login_face" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13pt"
+                        android:layout_toRightOf="@id/fb"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="facebook"
+                            android:textColor="@color/f1"
+                            android:textSize="24pt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{user.isbindFacebook?@string/relieveBind:@string/unBind}"
+                            android:textColor="@color/t2"
+                            android:textSize="27pt" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="25pt"
+                        android:layout_height="25pt"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/jtt" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+
+</layout>

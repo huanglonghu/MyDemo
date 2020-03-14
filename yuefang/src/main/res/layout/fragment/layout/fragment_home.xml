@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.main.HomeFragment" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingTop="50pt"
+            android:paddingRight="15dp">
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:padding="10dp"
+                android:text="珠海"
+                android:textColor="#fff"
+                android:textSize="34pt"
+                app:direcation="2"
+                app:drawable="@drawable/down1"
+                app:drawableHeight="2dp"
+                app:drawableWidth="3dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/serach" />
+
+                <TextView
+                    android:id="@+id/searchEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="64pt"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint18"
+                    android:onClick="@{(v)->fragment.search(v,4)}"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:background="@color/b1"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/recommend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{(v)->fragment.search(v,1)}">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/it1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="3dp"
+                    android:text="@string/recommend"
+                    android:textColor="@{selectPosition==1?@color/c8:@color/t2}"
+                    android:textSize="28pt"
+                    app:direcation="2"
+                    app:drawable="@drawable/down2"
+                    app:drawableHeight="2dp"
+                    app:drawableWidth="3dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{(v)->fragment.search(v,2)}">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/it2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="3dp"
+                    android:text="@string/zx"
+                    android:textColor="@{selectPosition==2?@color/c8:@color/t2}"
+                    android:textSize="28pt"
+                    app:direcation="2"
+                    app:drawable="@drawable/down2"
+                    app:drawableHeight="2dp"
+                    app:drawableWidth="3dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/require"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{(v)->fragment.search(v,3)}">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/it3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="3dp"
+                    android:text="@string/sx"
+                    android:textColor="@{selectPosition==3?@color/c8:@color/t2}"
+                    android:textSize="28pt"
+                    app:direcation="2"
+                    app:drawable="@{selectPosition==3?@drawable/down3:@drawable/down2}"
+                    app:drawableHeight="2dp"
+                    app:drawableWidth="3dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.xx.yuefang.ui.customview.ScrollRefreshListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider9"
+                android:dividerHeight="20pt" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </LinearLayout>
+</layout>

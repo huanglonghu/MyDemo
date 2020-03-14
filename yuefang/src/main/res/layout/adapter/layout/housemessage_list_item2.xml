@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.HouseMessage.DataBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider1"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/baseMsg"
+            android:textStyle="bold"
+            android:textColor="@color/t2"
+            android:textSize="37pt" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/premisesName}'
+            bind:value="@{data.premisesName}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name="@{@string/unitPrice}"
+            bind:value="@{String.valueOf(data.averagePrice)}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/totalPrice}'
+            bind:value="@{data.totalPrice}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/propertyType}'
+            bind:value="@{data.propertyType}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/RenovationType}'
+            bind:value="@{data.renovationType}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/PropertyRightYears}'
+            bind:value="@{data.propertyRightYears}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/regionalLocation}'
+            bind:value="@{data.region}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/address}'
+            bind:value="@{data.address}" />
+
+    </LinearLayout>
+</layout>

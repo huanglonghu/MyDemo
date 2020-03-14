@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="developerId"
+            type="int" />
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/appointItem"
+            layout="@layout/appoint_item"
+            bind:bean="@{bean}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider7" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/cb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_cb" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/delete"
+                    android:layout_width="136pt"
+                    android:layout_height="60pt"
+                    android:background="@drawable/bg_3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="28pt"
+                        android:layout_height="28pt"
+                        android:background="@drawable/delete2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5pt"
+                        android:text="@string/delete"
+                        android:textColor="@color/t3"
+                        android:textSize="24pt" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/yuyue"
+                    android:layout_width="136pt"
+                    android:layout_height="60pt"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:background="@drawable/bg_4"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="30pt"
+                        android:layout_height="26pt"
+                        android:background="@drawable/appoint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5pt"
+                        android:text="@string/yy"
+                        android:textColor="@color/c8"
+                        android:textSize="24pt" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

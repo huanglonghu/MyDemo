@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="tip"
+            type="String" />
+
+        <variable
+            name="count"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ViewStub
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/empty_layout" />
+
+            <com.xx.yuefang.ui.customview.ScrollRefreshListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider8"
+                android:dividerHeight="5dp"
+                android:orientation="vertical"
+                android:scrollbars="none" />
+
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

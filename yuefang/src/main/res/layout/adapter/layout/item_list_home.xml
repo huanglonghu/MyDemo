@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="dataBean"
+            type="com.xx.yuefang.bean.PremisesBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="320pt">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="750pt"
+                android:layout_height="320pt" />
+
+            <ProgressBar
+                android:id="@+id/img_loading"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@anim/loadmore"
+                android:indeterminateDuration="2000" />
+
+
+            <LinearLayout
+                android:id="@+id/llexpend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20pt"
+                android:paddingLeft="20pt"
+                android:layout_marginBottom="10dp"
+                android:divider="@drawable/divider3"
+                android:orientation="horizontal"
+                android:showDividers="middle" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="82pt"
+            android:background="@color/a3"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/houseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{dataBean.premisesName}"
+                    android:textColor="#000"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/housePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/navigation2"
+                    android:textSize="28pt" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{dataBean.propertyType}"
+                        android:textColor="@color/t3"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text='@{dataBean.region+"-"}'
+                        android:textColor="@color/t3"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:text="@{dataBean.address}"
+                        android:textColor="@color/t3"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:text='@{dataBean.score+@string/unit3+" "+dataBean.commentCount+@string/unit4}'
+                        android:textColor="@color/c8"
+                        android:textSize="20pt" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="180pt"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/navigation1"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="20pt" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

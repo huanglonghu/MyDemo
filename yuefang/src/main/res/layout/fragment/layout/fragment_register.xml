@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="registerBody"
+            type="com.xx.yuefang.bean.RegisterBody" />
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="area"
+            type="int" />
+
+        <variable
+            name="register"
+            type="com.xx.yuefang.ui.fragment.login.RegisterFragment" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b7"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/bg_login">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="50pt"
+                    android:paddingRight="15dp">
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:onClick="@{()->presenter.back()}"
+                        android:padding="15dp"
+                        android:src="@drawable/back5" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/registerAccount"
+                        android:textColor="#fff"
+                        android:textSize="35pt" />
+
+
+                    <TextView
+                        android:id="@+id/option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/parterRegister"
+                        android:textColor="#fff"
+                        android:textSize="28pt" />
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20pt"
+                android:layout_marginTop="-70dp"
+                android:layout_marginRight="20pt"
+                android:background="@drawable/shape13"
+                android:orientation="vertical"
+                android:paddingLeft="35pt"
+                android:paddingRight="35pt">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70pt"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="195pt"
+                        android:layout_height="80pt"
+                        android:background="@drawable/shape18"
+                        android:gravity="center"
+                        android:onClick="@{()->register.toggleArea(0)}"
+                        android:text="@string/t5"
+                        android:textColor="@{area==0?@color/d1:@color/d2}"
+                        android:textSize="29pt" />
+
+                    <TextView
+                        android:layout_width="195pt"
+                        android:layout_height="80pt"
+                        android:background="@drawable/shape18"
+                        android:gravity="center"
+                        android:onClick="@{()->register.toggleArea(1)}"
+                        android:text="@string/t6"
+                        android:textColor="@{area==1?@color/d1:@color/d2}"
+                        android:textSize="29pt" />
+
+                    <TextView
+                        android:layout_width="195pt"
+                        android:layout_height="80pt"
+                        android:background="@drawable/shape18"
+                        android:gravity="center"
+                        android:onClick="@{()->register.toggleArea(2)}"
+                        android:text="@string/t7"
+                        android:textColor="@{area==2?@color/d1:@color/d2}"
+                        android:textSize="29pt" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="40pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/mobile" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="@string/hint5"
+                        android:inputType="number"
+                        android:textColorHint="@color/t3"
+                        android:textSize="27pt" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="40pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/psw" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint7"
+                        android:inputType="number"
+                        android:text="@={registerBody.code}"
+                        android:textColorHint="@color/t3"
+                        android:textSize="27pt" />
+
+                    <TextView
+                        android:id="@+id/sendYzm"
+                        android:layout_width="180pt"
+                        android:layout_height="60pt"
+                        android:background="@drawable/bg_btn_yzm"
+                        android:gravity="center"
+                        android:padding="5pt"
+                        android:text="@string/fsyzm"
+                        android:textColor="@drawable/tv_color_selector3"
+                        android:textSize="23pt" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="40pt"
+                    android:background="@drawable/shape18"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:visibility="@{registerBody.openId==null?View.VISIBLE:View.GONE}">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/psw2" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="@string/hint6"
+                        android:inputType="textPassword"
+                        android:text="@={registerBody.password}"
+                        android:textColor="@color/t3"
+                        android:textSize="27pt" />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape11"
+                    android:text="@string/register"
+                    android:textColor="#fff"
+                    android:textSize="30pt" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50pt"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll"
+                        android:text="注册/登录即代表同意"
+                        android:textSize="20pt" />
+
+
+                    <TextView
+                        android:id="@+id/privacyPolicy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/t10"
+                        android:textColor="@color/c8"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/t11"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:id="@+id/serviceArgument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/t12"
+                        android:textColor="@color/c8"
+                        android:textSize="20pt" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</layout>

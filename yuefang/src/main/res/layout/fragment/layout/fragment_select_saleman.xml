@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="type"
+            type="int" />
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="count"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title='@{@string/selectSaleMan}' />
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/a4"
+            android:orientation="vertical"
+            android:paddingLeft="30pt"
+            android:paddingRight="30pt">
+
+            <LinearLayout
+                android:id="@+id/headLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:showDividers="middle">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="@string/title3"
+                    android:textSize="25pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/icon1"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="@string/title4"
+                    android:textSize="25pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/icon2"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="@string/title5"
+                    android:textSize="25pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/icon3"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="@string/title6"
+                    android:textSize="25pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/icon4"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/headLayout"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/saleManLv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="10dp"
+                    android:scrollbars="none" />
+
+                <TextView
+                    android:id="@+id/sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="100pt"
+                    android:background="@drawable/shape1"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="#fff"
+                    android:textSize="32pt"
+                    android:visibility="@{type==1?View.VISIBLE:View.GONE}" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

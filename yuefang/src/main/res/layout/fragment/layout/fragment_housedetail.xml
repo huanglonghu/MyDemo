@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:material="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="show"
+            type="boolean" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xx.yuefang.ui.customview.ObservableScrollView
+                android:id="@+id/srcollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.xx.yuefang.ui.wrapper.TopWrapper
+                        android:id="@+id/top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ViewStub
+                        android:id="@+id/vs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout="@layout/layout_premises_detail_container" />
+
+                </LinearLayout>
+            </com.xx.yuefang.ui.customview.ObservableScrollView>
+
+            <include
+                layout="@layout/wrapper_onekey_appoint"
+                android:layout_width="match_parent"
+                android:layout_height="145pt"
+                bind:data="@{bean}"
+                bind:presenter="@{presenter}"
+                bind:userType="@{userType}" />
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/house_detail_toolbar"
+            layout="@layout/toolbar1"
+            bind:presenter="@{presenter}"
+            bind:show="@{show}"
+            bind:title="@{bean.premisesName}" />
+
+
+    </RelativeLayout>
+
+
+</layout>

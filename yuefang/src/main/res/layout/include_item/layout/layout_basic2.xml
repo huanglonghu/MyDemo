@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="count"
+            type="int" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/b7">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_login">
+
+            <include
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{title}" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ViewStub
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/empty_layout"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="@{count!=0?View.VISIBLE:View.GONE}">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:textColor="#fff"
+                    android:textSize="26pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/check"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <ListView
+                    android:id="@+id/lv_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_2"
+                    android:divider="@drawable/divider8"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

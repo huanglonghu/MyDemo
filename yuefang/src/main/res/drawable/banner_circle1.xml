@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20pt"
+    android:height="20pt"
+    android:viewportWidth="10"
+    android:viewportHeight="10">
+
+
+    <path
+        android:fillColor="@color/banner1"
+        android:pathData="M5,0A5,5 0 1 1 5,10A5,5 0 1 1 5,0"
+        android:strokeWidth="0.1" />
+    <!--（圆的x轴半径，y轴半径，x轴旋转角度，0/1-小/大弧度，0/1-逆/顺时针，圆的终点位置x点，圆的终点位置y点）-->
+
+
+</vector>
+
+
+

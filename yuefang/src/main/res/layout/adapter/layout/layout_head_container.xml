@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.CurrentCommentBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="60pt"
+                android:layout_height="60pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20pt"
+                android:text="@{bean.userName}"
+                android:textColor="#000"
+                android:textSize="26pt"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility='@{bean.parentName==null||bean.parentName.equals("")?View.GONE:View.VISIBLE}'>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10pt"
+                    android:layout_marginRight="10pt"
+                    android:text="@string/hf"
+                    android:textSize="26pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:text="@{bean.parentName}"
+                    android:textColor="#000"
+                    android:textSize="26pt"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60pt"
+            android:layout_marginTop="15pt"
+            android:layout_marginBottom="15pt"
+            android:text="@{bean.content}"
+            android:textColor="#000"
+            android:textSize="26pt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60pt"
+            android:layout_marginBottom="20pt">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{bean.creationTime}"
+                android:textSize="24pt" />
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/rise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:text='@{"("+bean.rise+")"}'
+                android:textColor="@color/t1"
+                android:textSize="24pt"
+                app:direcation="0"
+                app:drawable="@{bean.isRise?@drawable/rise1:@drawable/rise2}"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

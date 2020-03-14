@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+        <variable
+            name="isInit"
+            type="boolean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30pt"
+        android:paddingRight="30pt"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50pt"
+            android:text="@{data.premisesName}"
+            android:textColor="@color/f2"
+            android:textSize="38pt" />
+
+        <LinearLayout
+            android:id="@+id/characeters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:divider="@drawable/divider3"
+            android:orientation="vertical"
+            android:showDividers="middle"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38pt"
+            android:divider="@drawable/divider2"
+            android:gravity="center_vertical"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80pt"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom">
+
+                    <com.xx.yuefang.ui.customview.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{data.unitPrice}"
+                        android:textColor="#e85f28"
+                        android:textSize="35pt" />
+
+                    <com.xx.yuefang.ui.customview.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unit5"
+                        android:textColor="#e85f28"
+                        android:textSize="28pt"
+                        android:visibility='@{data.unitPrice.equals("待定")||data.unitPrice.equals("暂无")?View.GONE:View.VISIBLE}' />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ll_price"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20pt"
+                    android:text="@string/dj"
+                    android:textColor="#989898"
+                    android:textSize="24pt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80pt"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom">
+
+                    <com.xx.yuefang.ui.customview.MyTextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{data.totalPrice}"
+                        android:textColor="#e85f28"
+                        android:textSize="35pt" />
+
+                    <com.xx.yuefang.ui.customview.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unit2"
+                        android:textColor="#e85f28"
+                        android:textSize="28pt"
+                        android:visibility='@{data.totalPrice.equals("待定")||data.totalPrice.equals("暂无")?View.GONE:View.VISIBLE}' />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/ll_totalPrice"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20pt"
+                    android:text="@string/allPrice"
+                    android:textColor="#989898"
+                    android:textSize="24pt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80pt"
+                android:layout_weight="1">
+
+                <com.xx.yuefang.ui.customview.MyTextView
+                    android:id="@+id/propertyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@{data.propertyType}"
+                    android:textColor="#e85f28"
+                    android:textSize="35pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20pt"
+                    android:text="@string/propertyType"
+                    android:textColor="#989898"
+                    android:textSize="24pt" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical">
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m1"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt"
+                    app:part2Text='@{data.buildingType}' />
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m2"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt"
+                    app:part2Text="@{data.constructionArea}" />
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m3"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt"
+                    app:part2Text="@{data.renovationType}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:id="@+id/houseType"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m4"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt" />
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m5"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt"
+                    app:part2Text="@{data.deliveryTime}" />
+
+                <com.xx.yuefang.ui.customview.PartTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    app:part1Color="@color/t1"
+                    app:part1Size="32pt"
+                    app:part1Text="@string/m6"
+                    app:part2Color="@color/t2"
+                    app:part2Size="32pt"
+                    app:part2Text="@{data.openingTime}" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/toMapDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/m7"
+                android:textSize="32pt" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{data.address}"
+                android:textColor="#000"
+                android:textSize="32pt" />
+
+            <ImageView
+                android:layout_width="35pt"
+                android:layout_height="45pt"
+                android:padding="10pt"
+                android:layout_marginLeft="5pt"
+                android:src="@drawable/back2" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lookMore"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn1"
+            android:gravity="center"
+            android:text="@string/t24"
+            android:textColor="@color/navigation2"
+            android:textSize="32pt" />
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+
+            />
+
+    </LinearLayout>
+</layout>

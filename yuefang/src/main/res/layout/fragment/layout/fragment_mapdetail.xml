@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="70pt"
+            android:src="@drawable/back4" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="470pt"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-353pt"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="117pt"
+                android:background="#99fefefe"
+                android:paddingLeft="32pt" />
+
+            <ListView
+                android:id="@+id/lv_mapLine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="40pt"
+                android:paddingLeft="50pt"
+                android:paddingTop="20pt"
+                android:paddingRight="50pt"
+                android:scrollbars="none"></ListView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

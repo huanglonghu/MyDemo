@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_vr"
+        android:layout_width="match_parent"
+        android:layout_height="150pt"
+        android:background="@drawable/bg_ar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ar_recycle"
+            android:layout_width="wrap_content"
+            android:layout_height="150pt"
+            android:layout_centerInParent="true"
+            android:paddingTop="10pt"
+            android:paddingBottom="10pt" />
+
+    </RelativeLayout>
+</layout>

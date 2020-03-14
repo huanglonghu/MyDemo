@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="count"
+            type="int" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_login">
+
+            <include
+                layout="@layout/toolbar_fans"
+                bind:count="@{count}"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/myfans}" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ViewStub
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/empty_layout"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="190pt"
+                android:layout_marginRight="30pt"
+                android:orientation="vertical">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:text="@string/myfans"
+                    android:textColor="#fff"
+                    android:textSize="26pt"
+                    app:direcation="0"
+                    app:drawable="@drawable/check"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+                <com.xx.yuefang.ui.customview.ScrollRefreshListView
+                    android:id="@+id/lv_myFans"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20pt"
+                    android:background="@drawable/bg_2"
+                    android:paddingLeft="35pt"
+                    android:paddingRight="35pt"
+                    android:scrollbars="none"
+                    android:visibility="@{count!=0?View.VISIBLE:View.GONE}" />
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

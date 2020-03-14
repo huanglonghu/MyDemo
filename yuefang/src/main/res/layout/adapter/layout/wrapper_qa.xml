@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/title"
+                android:text='@{@string/mfwdj+"("+data.questionsAnswerNum+")"}' />
+
+            <LinearLayout
+                android:id="@+id/lookAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:padding="10pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lookAll"
+                    android:textColor="@color/t1"
+                    android:textSize="24pt" />
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="25pt"
+                    android:layout_marginLeft="5pt"
+                    android:src="@drawable/back2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <include
+                layout="@layout/empty_layout"
+                android:visibility="@{data.questionsAnswerNum>0?View.GONE:View.VISIBLE}"
+                bind:tip="@{@string/noqa}" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_qaContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ask"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_btn1"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="35pt"
+                android:layout_height="32pt"
+                android:src="@drawable/ask" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15pt"
+                android:text="@{userType==4||userType==0?@string/wytw:@string/cktw}"
+                android:textColor="@color/navigation2"
+                android:textSize="32pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

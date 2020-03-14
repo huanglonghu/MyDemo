@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="30pt">
+
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="49pt"
+            android:layout_height="49pt" />
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20pt"
+            android:layout_marginRight="20pt"
+            android:layout_weight="1"
+            android:minHeight="80pt">
+
+            <EditText
+                android:id="@+id/conversation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:minHeight="80pt"
+                android:paddingLeft="20pt"
+                android:textSize="30pt" />
+
+            <Button
+                android:id="@+id/speechBtn"
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:gravity="center"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/emoji"
+            android:layout_width="49pt"
+            android:layout_height="49pt" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25pt">
+
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="80pt"
+                android:layout_height="60pt"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="25pt"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="49pt"
+                android:layout_height="49pt"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/botoomLyoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+</LinearLayout>

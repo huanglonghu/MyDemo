@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36pt"
+            android:text="@string/search"
+            android:textColor="@color/t8"
+            android:textSize="38pt" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginTop="36pt"
+            android:layout_marginBottom="39pt"
+            android:background="@drawable/divider_c" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:layout_marginLeft="30pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/bg_search2"
+            android:divider="@drawable/divider_c"
+            android:padding="1pt"
+            android:showDividers="middle">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="165pt"
+                android:layout_height="match_parent"
+                android:background="@color/b8"
+                android:gravity="center"
+                android:textColor="@color/t2"
+                android:text="@string/premisesName"
+                android:textSize="28pt" />
+
+
+            <RelativeLayout
+                android:id="@+id/down"
+                android:layout_width="78pt"
+                android:layout_height="match_parent"
+                android:background="@color/divider">
+
+                <ImageView
+                    android:layout_width="20pt"
+                    android:layout_height="18pt"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/down4" />
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint25"
+                android:paddingLeft="20pt"
+                android:textColorHint="@color/t1"
+                android:textSize="28pt" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="78pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/shape1"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="#fff"
+            android:textSize="38pt" />
+
+
+    </LinearLayout>
+</layout>

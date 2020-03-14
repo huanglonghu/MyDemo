@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="qaBean"
+            type="com.xx.yuefang.bean.QABean" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30pt"
+        tools:showIn="@layout/fragment_qa_replay">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape5"
+            android:gravity="center"
+            android:text="@string/wen"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{qaBean.content}"
+                android:textColor="#000"
+                android:textSize="32pt" />
+
+            <TextView
+                android:id="@+id/count_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question"
+                android:layout_marginTop="26pt"
+                android:text="@{@string/all+qaBean.questionsAnswersDtos.size()+@string/replay}"
+                android:textSize="28pt" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/count_replay"
+                android:layout_alignParentRight="true"
+                android:text="@{qaBean.creationTime}"
+                android:textColor="#000"
+                android:textSize="28pt" />
+
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20pt"
+                android:drawablePadding="10pt"
+                android:text="@string/xhd"
+                android:textColor="@color/c8"
+                android:textSize="28pt"
+                android:visibility="@{userType==4?View.GONE:View.VISIBLE}"
+                app:drawable="@drawable/ask"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

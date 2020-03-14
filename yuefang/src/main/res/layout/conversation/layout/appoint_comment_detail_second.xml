@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/b7">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_login">
+
+            <include
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/plDetail}" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="242pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/shape13"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/appointItem"
+                layout="@layout/appoint_item"
+                bind:bean="@{bean}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/divider8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20pt"
+                android:layout_marginTop="40pt"
+                android:layout_marginRight="20pt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{userType==4?@string/fwpj:@string/khpf}"
+                    android:textColor="@color/t2"
+                    android:textSize="28pt" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40pt"
+                    android:layout_marginLeft="25pt"
+                    android:stepSize="0.5"
+                    app:mrb_progressTint="@color/tint"
+                    app:mrb_secondaryProgressTint="@color/tint" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20pt"
+                android:layout_marginTop="40pt"
+                android:layout_marginRight="20pt"
+                android:background="#ebf4f9"
+                android:gravity="top"
+                android:hint="@string/hint24"
+                android:minHeight="220pt"
+                android:padding="15pt"
+                android:textColor="@color/t2"
+                android:textSize="28pt" />
+
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="120pt"
+                android:layout_marginTop="270pt"
+                android:background="@drawable/shape1"
+                android:gravity="center"
+                android:text="@string/commit"
+                android:textColor="#fff"
+                android:textSize="29pt" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+    </data>
+
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_login">
+
+
+            <include
+                android:id="@+id/employee_toolbar"
+                layout="@layout/toolbar6"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/myAppoint}" />
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/tab"
+                android:layout_width="wrap_content"
+                android:layout_height="80pt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="150pt"
+                android:layout_marginRight="30pt"
+                app:stl_defaultTabTextColor="@android:color/white"
+                app:stl_defaultTabTextHorizontalPadding="15pt"
+                app:stl_defaultTabTextSize="31pt"
+                app:stl_dividerColor="@android:color/transparent"
+                app:stl_indicatorColor="@android:color/white"
+                app:stl_indicatorCornerRadius="2dp"
+                app:stl_indicatorGravity="bottom"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="10pt"
+                app:stl_indicatorWithoutPadding="true"
+                app:stl_underlineThickness="0dp" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="242pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/bg_2" />
+
+
+    </RelativeLayout>
+</layout>

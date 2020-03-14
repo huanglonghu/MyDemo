@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="content"
+            type="String" />
+
+    </data>
+
+    <TextView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{content}"
+        android:textSize="28pt"
+        android:textColor="@color/t1" />
+</layout>

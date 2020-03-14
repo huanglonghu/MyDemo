@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.HouseMessage.DataBean.PremisesLicencesBean" />
+    </data>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/ysz}'
+            bind:value="@{data.certificate}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/fzsj}'
+            bind:value="@{data.issuingTime}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/bdld}'
+            bind:value="@{data.boundBuilding}" />
+
+
+    </LinearLayout>
+
+</layout>

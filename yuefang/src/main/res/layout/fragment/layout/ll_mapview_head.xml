@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+
+        <variable
+            name="counts"
+            type="int[]" />
+
+        <variable
+            name="mapUtil"
+            type="com.xx.yuefang.util.MapUtil" />
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="115pt"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(0)}"
+            android:text='@{@string/bus+"("+counts[0]+")"}'
+            android:textColor="@{selectPosition==0?@color/c8:@color/t1}"
+            android:textSize="32pt"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(1)}"
+            android:text='@{@string/education+"("+counts[1]+")"}'
+            android:textColor="@{selectPosition==1?@color/c8:@color/t1}"
+            android:textSize="32pt"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(2)}"
+            android:text='@{@string/bank+"("+counts[2]+")"}'
+            android:textColor="@{selectPosition==2?@color/c8:@color/t1}"
+            android:textSize="32pt"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(3)}"
+            android:text='@{@string/food+"("+counts[3]+")"}'
+            android:textColor="@{selectPosition==3?@color/c8:@color/t1}"
+            android:textSize="32pt" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(4)}"
+            android:text='@{@string/hospital+"("+counts[4]+")"}'
+            android:textColor="@{selectPosition==3?@color/c8:@color/t1}"
+            android:textSize="32pt" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->mapUtil.nearSerach(5)}"
+            android:text='@{@string/mall+"("+counts[5]+")"}'
+            android:textColor="@{selectPosition==3?@color/c8:@color/t1}"
+            android:textSize="32pt" />
+
+    </LinearLayout>
+</layout>

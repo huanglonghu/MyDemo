@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="point"
+            type="com.baidu.mapapi.search.core.PoiInfo" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{point.name}'
+            android:textColor="@color/t2"
+            android:textSize="32pt" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:text='@{point.address}'
+            android:textColor="@color/t1"
+            android:textSize="32pt" />
+
+        <com.xx.yuefang.ui.customview.ImageTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:textColor="@color/t1"
+            android:text='@{point.distance+@string/unit6}'
+            app:direcation="0"
+            android:textSize="32pt"
+            app:drawable="@drawable/adress"
+            app:drawableHeight="5dp"
+            app:drawableWidth="4dp" />
+
+    </LinearLayout>
+</layout>

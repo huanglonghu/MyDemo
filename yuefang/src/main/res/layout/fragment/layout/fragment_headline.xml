@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_headline"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70pt"
+                android:text="@string/headLine"
+                android:textColor="#fff"
+                android:textSize="42pt" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="135pt">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ssk"
+                    android:hint="@string/hint17"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="15dp"
+                    android:textColorHint="#636363"
+                    android:textSize="28pt" />
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20pt"
+                    android:src="@drawable/ssu" />
+
+            </RelativeLayout>
+
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/tab"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                app:stl_defaultTabTextColor="@android:color/white"
+                app:stl_defaultTabTextSize="15sp"
+                app:stl_dividerColor="@android:color/transparent"
+                app:stl_indicatorColor="@android:color/white"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="4dp"
+                app:stl_underlineThickness="0dp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

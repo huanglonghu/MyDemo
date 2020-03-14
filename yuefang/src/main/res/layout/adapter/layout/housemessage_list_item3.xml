@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.HouseMessage.DataBean" />
+
+        <variable
+            name="houseType"
+            type="String" />
+
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider1"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="@string/saleMsg"
+            android:textStyle="bold"
+            android:textColor="@color/t2"
+            android:textSize="37pt" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/state}'
+            bind:value="@{data.state}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/slbdh}'
+            bind:value="@{data.salesOfficePhone}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/sldz}'
+            bind:value="@{data.salesOfficeAddress}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/smds}'
+            bind:value="@{data.sellNumber}" />
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/smhx}'
+            bind:value="@{data.houseTypes}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/openTime}'
+            bind:value="@{data.openingTime}" />
+
+
+        <include
+            layout="@layout/housemessage_list_item"
+            bind:name='@{@string/deliveryTime}'
+            bind:value="@{data.deliveryTime}" />
+
+
+    </LinearLayout>
+
+</layout>

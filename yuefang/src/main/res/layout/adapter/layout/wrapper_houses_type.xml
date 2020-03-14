@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+        <variable
+            name="count"
+            type="int" />
+
+        <variable
+            name="isInit"
+            type="boolean" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{@string/hxjs+"("+count+")"}'
+                android:textColor="@color/t2"
+                android:textSize="38pt" />
+
+
+            <LinearLayout
+                android:id="@+id/allType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allType"
+                    android:textColor="@color/t1"
+                    android:textSize="24pt" />
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="25pt"
+                    android:layout_marginLeft="5pt"
+                    android:src="@drawable/back2" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/empty_layout"
+                android:visibility="@{count>0?View.GONE:View.VISIBLE}"
+                bind:tip="@{@string/noType}" />
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider11"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30pt"
+                android:paddingRight="30pt"
+                android:showDividers="middle"
+                android:weightSum="2" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

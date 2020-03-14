@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="qaBean"
+            type="com.xx.yuefang.bean.QABean" />
+
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title="@{@string/replayDetail}" />
+
+        <include layout="@layout/layout_divider2" />
+
+        <TextView
+            android:id="@+id/premisesName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="35pt"
+            android:text="@{qaBean.premisesName}"
+            android:textColor="#000"
+            android:textSize="32pt" />
+
+        <include layout="@layout/layout_divider" />
+
+        <ListView
+            android:id="@+id/list_replay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+</layout>

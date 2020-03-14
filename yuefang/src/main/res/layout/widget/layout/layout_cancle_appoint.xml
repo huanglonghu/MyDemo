@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="dialog"
+            type="com.xx.yuefang.ui.widget.CancleAppointDialog" />
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/title7"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider1" />
+
+        <ListView
+            android:id="@+id/lv_resaon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30pt" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20pt"
+            android:layout_marginBottom="50pt"
+            android:divider="@drawable/divider1"
+            android:orientation="horizontal"
+            android:paddingLeft="30pt"
+            android:paddingRight="30pt"
+            android:showDividers="middle">
+
+
+            <TextView
+                android:id="@+id/cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape1a"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="#fff"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16pt"
+                android:layout_weight="1"
+                android:background="@drawable/shape1"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="#fff"
+                android:textSize="30pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

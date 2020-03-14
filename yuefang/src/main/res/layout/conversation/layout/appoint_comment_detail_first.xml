@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.AppointItemView" />
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/b7">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_login">
+
+            <include
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/plDetail}" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="242pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/shape13"
+            android:divider="@drawable/divider_b"
+            android:orientation="vertical"
+            android:showDividers="middle|end">
+
+
+            <include
+                android:id="@+id/appointItem"
+                layout="@layout/appoint_item"
+                bind:bean="@{bean}" />
+
+            <LinearLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="226pt"
+                android:orientation="vertical"
+                android:paddingLeft="20pt"
+                android:paddingTop="35pt"
+                android:paddingRight="20pt"
+                android:paddingBottom="20pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30pt"
+                    android:text="@string/my_comment"
+                    android:textColor="#000"
+                    android:textSize="29pt"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20pt"
+                android:paddingTop="35pt"
+                android:paddingRight="20pt"
+                android:paddingBottom="20pt">
+
+                <TextView
+                    android:id="@+id/tvObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30pt"
+                    android:textColor="#000"
+                    android:textSize="29pt"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

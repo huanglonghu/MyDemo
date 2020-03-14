@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.ReviewDetailResponse.DataBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:bind="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="456pt"
+                android:background="@drawable/bg_login">
+
+                <include
+                    layout="@layout/toolbar3"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{data.applyType==2?@string/bindReview:@string/unBindReview}" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30pt"
+                android:layout_marginTop="-70dp"
+                android:layout_marginRight="30pt"
+                android:background="@drawable/bg_2"
+                android:divider="@drawable/divider8"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider1"
+                    android:orientation="vertical"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt"
+                    android:showDividers="middle">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20pt"
+                        android:paddingBottom="20pt">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sqr"
+                            android:textColor="@color/t2"
+                            android:textSize="28pt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="@{data.applyTypeStr}"
+                            android:textColor="@color/c8"
+                            android:textSize="25pt" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20pt"
+                        android:paddingBottom="20pt">
+
+                        <ImageView
+                            android:id="@+id/head"
+                            android:layout_width="90pt"
+                            android:layout_height="90pt" />
+
+                        <LinearLayout
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10pt"
+                            android:layout_toRightOf="@id/head">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text='@{data.applyrType+" : "}'
+                                android:textColor="@color/t10"
+                                android:textSize="25pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{data.userName}"
+                                android:textColor="@color/t2"
+                                android:textSize="25pt" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name"
+                            android:layout_marginLeft="10pt"
+                            android:layout_marginTop="8pt"
+                            android:layout_toRightOf="@id/head"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="45pt"
+                                android:layout_height="45pt"
+                                android:src="@drawable/phone5" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7pt"
+                                android:text="@{data.phoneNumber}"
+                                android:textColor="@color/c8"
+                                android:textSize="21pt" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider1"
+                    android:orientation="vertical"
+                    android:paddingLeft="20pt"
+                    android:paddingRight="20pt"
+                    android:showDividers="middle">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="17pt"
+                        android:paddingBottom="15pt"
+                        android:text="@{data.applyType==2?@string/m9:@string/m8}"
+                        android:textColor="@color/t2"
+                        android:textSize="28pt" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20pt"
+                        android:paddingBottom="20pt">
+
+                        <ImageView
+                            android:id="@+id/head2"
+                            android:layout_width="90pt"
+                            android:layout_height="90pt" />
+
+                        <LinearLayout
+                            android:id="@+id/name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10pt"
+                            android:layout_toRightOf="@id/head2">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{data.applyType==2?@string/bindcompany:@string/m10}"
+                                android:textSize="25pt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{data.salespersonName}"
+                                android:textColor="@color/t2"
+                                android:textSize="25pt" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name2"
+                            android:layout_marginLeft="10pt"
+                            android:layout_marginTop="8pt"
+                            android:layout_toRightOf="@id/head2"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="45pt"
+                                    android:layout_height="45pt"
+                                    android:src="@drawable/phone5" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="7pt"
+                                    android:text="@{data.SPhoneNumber}"
+                                    android:textColor="@color/c8"
+                                    android:textSize="21pt" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@{data.premisesName}"
+                                android:textColor="@color/t2"
+                                android:textSize="26pt" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="30pt"
+                        android:paddingBottom="40pt">
+
+                        <com.xx.yuefang.ui.customview.PartTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="@{data.applyReason!=null?View.VISIBLE:View.GONE}"
+                            app:part1Color="@color/t1"
+                            app:part1Size="26pt"
+                            app:part1Text="@string/m11"
+                            app:part2Color="@color/t2"
+                            app:part2Size="26pt"
+                            app:part2Text="@{data.applyReason}" />
+
+                        <com.xx.yuefang.ui.customview.PartTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30pt"
+                            android:visibility="@{data.refuseReason!=null?View.VISIBLE:View.GONE}"
+                            app:part1Color="@color/t1"
+                            app:part1Size="26pt"
+                            app:part1Text="@string/m12"
+                            app:part2Color="@color/t2"
+                            app:part2Size="26pt"
+                            app:part2Text="@{data.refuseReason}" />
+
+                        <com.xx.yuefang.ui.customview.PartTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30pt"
+                            app:part1Color="@color/t1"
+                            app:part1Size="26pt"
+                            app:part1Text="@string/m13"
+                            app:part2Color="@color/t2"
+                            app:part2Size="26pt"
+                            app:part2Text="@{data.creationTime}" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="@{data.examineState==1?View.VISIBLE:View.GONE}">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90pt"
+                            android:layout_marginTop="30pt">
+
+
+                            <TextView
+                                android:id="@+id/agree"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/shape1"
+                                android:gravity="center"
+                                android:text="@{data.applyType==2?@string/agreeBind:@string/agreeUnBind}"
+                                android:textColor="#fff"
+                                android:textSize="35pt" />
+
+                            <TextView
+                                android:id="@+id/refuse"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15pt"
+                                android:layout_weight="1"
+                                android:background="@drawable/shape1_d"
+                                android:gravity="center"
+                                android:text="@{data.applyType==2?@string/refuseBind:@string/refuseUnBind}"
+                                android:textColor="#fff"
+                                android:textSize="35pt" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/expendLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <EditText
+                                android:id="@+id/refuseReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="230pt"
+                                android:layout_marginTop="30pt"
+                                android:background="@drawable/bg_et2"
+                                android:gravity="start"
+                                android:hint="@string/hint20"
+                                android:padding="17pt"
+                                android:textSize="25pt" />
+
+
+                            <CheckBox
+                                android:id="@+id/cb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/b1"
+                                android:textSize="27pt" />
+
+                            <TextView
+                                android:id="@+id/commit"
+                                android:layout_width="match_parent"
+                                android:layout_height="100pt"
+                                android:background="@drawable/shape1"
+                                android:gravity="center"
+                                android:text="@string/qdtj"
+                                android:textColor="#fff"
+                                android:textSize="35pt" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20pt"
+                        android:text="@string/b2"
+                        android:textColor="@color/t11"
+                        android:textSize="25pt"
+                        android:visibility="@{data.examineState==4?View.VISIBLE:View.GONE}" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

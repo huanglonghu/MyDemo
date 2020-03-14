@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="145pt"
+        android:background="@color/f3"
+        android:orientation="horizontal"
+        android:paddingLeft="30pt"
+        android:paddingTop="10pt"
+        android:paddingRight="30pt"
+        android:paddingBottom="15pt"
+        android:visibility="@{userType==4||userType==0?View.VISIBLE:View.GONE}">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape1"
+            android:gravity="center"
+            android:onClick="@{()->presenter.oneKeyYueFang(data)}">
+
+
+            <ImageView
+                android:layout_width="50pt"
+                android:layout_height="40pt"
+                android:src="@drawable/yf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18pt"
+                android:text="@string/yjyy"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10pt"
+            android:layout_weight="1"
+            android:background="@drawable/shape_b"
+            android:gravity="center"
+            android:onClick="@{()->presenter.selectSalePerson(data)}">
+
+            <ImageView
+                android:layout_width="50pt"
+                android:layout_height="40pt"
+                android:src="@drawable/chat3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18pt"
+                android:text="@string/zxzx"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>
+

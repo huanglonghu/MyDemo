@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="dialog"
+            type="com.xx.yuefang.ui.widget.UnBindAgentDialog" />
+
+        <variable
+            name="selectPosition"
+            type="int" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30pt">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/title11"
+                android:textColor="@color/t2"
+                android:textSize="32pt" />
+
+            <ImageView
+                android:id="@+id/exit"
+                android:layout_width="27pt"
+                android:layout_height="27pt"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:padding="10pt"
+                android:src="@drawable/close4" />
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider1" />
+
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="210pt"
+            android:layout_marginLeft="20pt"
+            android:layout_marginTop="20pt"
+            android:layout_marginRight="20pt"
+            android:background="@drawable/bg_et2"
+            android:gravity="start"
+            android:hint="@string/hint29"
+            android:padding="17pt"
+            android:textSize="28pt" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30pt"
+            android:layout_marginBottom="50pt"
+            android:divider="@drawable/divider1"
+            android:orientation="horizontal"
+            android:paddingLeft="30pt"
+            android:paddingRight="30pt"
+            android:showDividers="middle">
+
+
+            <TextView
+                android:id="@+id/cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape1a"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="#fff"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/complete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16pt"
+                android:layout_weight="1"
+                android:background="@drawable/shape1"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="#fff"
+                android:textSize="30pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

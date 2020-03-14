@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="poi"
+            type="com.baidu.mapapi.search.core.PoiInfo" />
+
+        <variable
+            name="isSelect"
+            type="boolean" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="50pt"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60pt"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{poi.name}"
+                android:textColor="@color/t2"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18pt"
+                android:text="@{poi.address}"
+                android:textColor="#8e8e8e"
+                android:textSize="25pt"
+                android:visibility="@{poi.address==null?View.GONE:View.VISIBLE}" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/rb"
+            android:layout_width="32pt"
+            android:layout_height="32pt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23pt"
+            android:src="@drawable/cb5"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

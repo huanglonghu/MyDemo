@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="commentBean"
+            type="com.xx.yuefang.bean.Comment" />
+
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30pt"
+        android:paddingBottom="30pt">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="80pt"
+                android:layout_height="80pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@{commentBean.userName}"
+                android:textColor="#000"
+                android:textSize="32pt" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{commentBean.content}"
+            android:textColor="#000"
+            android:textSize="32pt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{commentBean.creationTime}"
+                android:textSize="24pt" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10pt"
+                    android:text='@{"("+commentBean.number+")"}'
+                    android:textColor="@color/t1"
+                    android:textSize="24pt"
+                    app:direcation="0"
+                    android:clickable="true"
+                    app:drawable="@drawable/comment"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+
+                <com.xx.yuefang.ui.customview.ImageTextView
+                    android:id="@+id/rise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:padding="10pt"
+                    android:text='@{"("+commentBean.rise+")"}'
+                    android:textColor="@color/t1"
+                    android:textSize="24pt"
+                    app:direcation="0"
+                    android:clickable="true"
+                    app:drawable="@{commentBean.isRise?@drawable/rise1:@drawable/rise2}"
+                    app:drawableHeight="5dp"
+                    app:drawableWidth="5dp" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

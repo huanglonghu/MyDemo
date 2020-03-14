@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+    </data>
+
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="456pt"
+            android:background="@drawable/bg_login">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/review}" />
+
+            <com.xx.yuefang.ui.customview.switchView.SwitchView
+                android:id="@+id/switchReview"
+                android:layout_width="406pt"
+                android:layout_height="60pt"
+                android:layout_below="@id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60pt"
+                android:textSize="32pt"
+                app:bgColor="#b3cef9"
+                app:leftColor="#ffffff"
+                app:rightColor="#fff"
+                app:textLeft="@string/bindReview"
+                app:textLeftClickColor="@color/c8"
+                app:textLeftColor="@color/t2"
+                app:textRight="@string/unBindReview"
+                app:textRightClickColor="@color/c8"
+                app:textRightColor="@color/t2"
+                app:time="300" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="270pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/bg_2"
+            android:divider="@drawable/divider8"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                app:stl_customTabTextLayoutId="@layout/tab_text"
+                app:stl_customTabTextViewId="@+id/tab_4"
+                app:stl_dividerColor="@android:color/transparent"
+                app:stl_indicatorColor="@android:color/holo_orange_dark"
+                app:stl_indicatorGravity="bottom"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="3pt"
+                app:stl_underlineThickness="0dp" />
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

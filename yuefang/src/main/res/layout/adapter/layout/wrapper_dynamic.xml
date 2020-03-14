@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+        <variable
+            name="dynamic"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean.PremisesActivityBean" />
+
+
+        <variable
+            name="newsinfo"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean.PremisesNewsInfosBean"/>
+
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/title"
+                android:paddingTop="35pt"
+                android:text="@string/lpdt" />
+
+            <ImageView
+                android:layout_width="65pt"
+                android:layout_height="75pt"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/trends" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <include
+                layout="@layout/empty_layout"
+                android:visibility="@{newsinfo==null?View.VISIBLE:View.GONE}"
+                bind:tip="@{@string/nodynamic}" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{newsinfo==null?View.GONE:View.VISIBLE}"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="188pt"
+                        android:layout_height="142pt"
+                        android:background="@drawable/dynmic"
+                        />
+
+                    <TextView
+                        android:id="@+id/tx1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img"
+                        android:singleLine="true"
+                        android:text="@{newsinfo.title}"
+                        android:textColor="@color/t2"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tx1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20pt"
+                        android:layout_toRightOf="@id/img"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/t8"
+                        android:textSize="24pt" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="@{dynamic==null?View.GONE:View.VISIBLE}">
+
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape1_d"
+                        android:padding="3dp"
+                        android:text="@string/zxhd"
+                        android:textColor="#fff"
+                        android:textSize="20pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv"
+                        android:ellipsize="end"
+                        android:maxEms="17"
+                        android:singleLine="true"
+                        android:text="@{dynamic.activityName}"
+                        android:textSize="26pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{dynamic.creationTime}"
+                        android:textSize="20pt" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

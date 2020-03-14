@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.NewsCommentDetailResponse.DataBean" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title="@{@string/newscommentDetail}" />
+
+        <include layout="@layout/layout_divider2" />
+
+
+        <ListView
+            android:id="@+id/lv_newsCommentReplay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/newscomment_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bj_comment_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="30pt"
+            android:paddingTop="10pt"
+            android:paddingRight="30pt"
+            android:paddingBottom="10pt"
+            android:visibility="@{bean.isComment?View.VISIBLE:View.GONE}">
+
+
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="64pt"
+                android:background="@drawable/bj_comment"
+                android:gravity="center_vertical"
+                android:paddingLeft="18pt">
+
+                <ImageView
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:src="@drawable/writecommet" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="18pt"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/tosay"
+                    android:textSize="30pt" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

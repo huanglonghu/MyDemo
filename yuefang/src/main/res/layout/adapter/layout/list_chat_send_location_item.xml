@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="customMsg"
+            type="com.xx.yuefang.bean.CustomMessage.DataBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_chattime"
+            android:paddingLeft="12pt"
+            android:paddingTop="10pt"
+            android:paddingRight="12pt"
+            android:paddingBottom="10pt"
+            android:textColor="#fff"
+            android:textSize="18pt" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_marginBottom="20pt"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/img_loading"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:indeterminateDrawable="@anim/loadmore"
+                android:indeterminateDuration="2000" />
+
+
+            <LinearLayout
+                android:id="@+id/locationMsg"
+                android:layout_width="440pt"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt"
+                android:layout_marginRight="18pt"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical"
+                    android:paddingLeft="20pt"
+                    android:paddingTop="25pt"
+                    android:paddingRight="20pt"
+                    android:paddingBottom="15pt">
+
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/t2"
+                        android:textSize="29pt" />
+
+                    <TextView
+                        android:id="@+id/adress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8pt"
+                        android:textColor="@color/t1"
+                        android:textSize="22pt" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/locationMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="170pt" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivHead"
+                android:layout_width="90pt"
+                android:layout_height="90pt"
+                android:clickable="true" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>
+

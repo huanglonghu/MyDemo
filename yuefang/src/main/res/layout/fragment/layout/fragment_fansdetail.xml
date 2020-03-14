@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="dataBean"
+            type="com.xx.yuefang.bean.FansList.DataBeanX.DataBean" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="330pt"
+            android:background="@drawable/bg_login">
+
+            <include
+                layout="@layout/toolbar3"
+                bind:presenter="@{presenter}"
+                bind:title="@{@string/myfans}" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30pt"
+            android:layout_marginTop="242pt"
+            android:layout_marginRight="30pt"
+            android:background="@drawable/bg_2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="20pt"
+                android:paddingRight="20pt">
+
+                <ImageView
+                    android:id="@+id/ivHead"
+                    android:layout_width="60pt"
+                    android:layout_height="60pt" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10pt"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{dataBean.nickName}"
+                        android:textColor="@color/t2"
+                        android:textSize="24pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10pt"
+                        android:text="@{dataBean.phoneNumber}"
+                        android:textColor="@color/t1"
+                        android:textSize="16pt" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/divider8" />
+
+            <ListView
+                android:id="@+id/lv_fansDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider8"
+                android:dividerHeight="5dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

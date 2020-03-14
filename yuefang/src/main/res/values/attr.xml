@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PartTextView">
+        <attr name="part1Text" format="string" />
+        <attr name="part2Text" format="string" />
+        <attr name="part1Color" format="color" />
+        <attr name="part2Color" format="color" />
+        <attr name="partSize" format="dimension" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="part1Size" format="dimension" />
+        <attr name="part2Size" format="dimension" />
+        <attr name="maxLength2" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageTextView">
+        <attr name="drawable" />
+        <attr name="drawableWidth" />
+        <attr name="drawableHeight" />
+        <attr name="direcation" />
+    </declare-styleable>
+
+    <declare-styleable name="NewsView">
+        <attr name="reduis" format="dimension" />
+        <attr name="numText" format="string" />
+    </declare-styleable>
+
+
+    <attr name="drawable" format="reference" />
+    <attr name="drawableWidth" format="dimension" />
+    <attr name="drawableHeight" format="dimension" />
+    <attr name="direcation" format="integer" />
+
+
+
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+        <attr name="textLength" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ClipViewLayout">
+        <attr name="clipType" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="mHorizontalPadding" format="dimension" />
+        <attr name="clipBorderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ScrollRefreshListView">
+        <attr name="page" format="integer" />
+        <attr name="isLoading" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="etv_MaxLinesOnShrink" format="reference|integer" />
+        <attr name="etv_EllipsisHint" format="reference|string" /><!--default is ..-->
+        <attr name="etv_ToExpandHint" format="reference|string" /><!--"to expand" hint string, default is "Expand"-->
+        <attr name="etv_ToShrinkHint" format="reference|string" /><!--"to shrink" hint string, default is "Shrink"-->
+        <attr name="etv_GapToExpandHint" format="reference|string" /><!--gap between "toExpandHint" and "trimmed text"-->
+        <attr name="etv_GapToShrinkHint" format="reference|string" /><!--gap between "toShrinkHint" and "trimmed text"-->
+        <attr name="etv_EnableToggle" format="reference|boolean" /><!--if toggle the state when click ExpandTextView-->
+        <attr name="etv_ToExpandHintShow" format="reference|boolean" /><!--if show "toExpandHint"-->
+        <attr name="etv_ToShrinkHintShow" format="reference|boolean" /><!--if show "toShrinkHint"-->
+        <attr name="etv_ToExpandHintColor" format="reference|color" /><!--text color of "toExpandHint"-->
+        <attr name="etv_ToShrinkHintColor" format="reference|color" /><!--text color of "toShrinkHint"-->
+        <attr name="etv_ToExpandHintColorBgPressed" format="reference|color" /><!--background color if "toExpandHint" pressed-->
+        <attr name="etv_ToShrinkHintColorBgPressed" format="reference|color" /><!--background color if "toShrinkHint" pressed-->
+        <attr name="etv_InitState" format="enum"><!--init state, default is shrink-->
+            <enum name="shrink" value="0" />
+            <enum name="expand" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ArrowTextView">
+        <attr name="textRadius" format="dimension" />
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowInHeight" format="dimension" />
+        <attr name="bg" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchView">
+        <attr name="bgColor" format="color|reference" />
+        <attr name="leftColor" format="color|reference" />
+        <attr name="rightColor" format="color|reference" />
+        <attr name="textLeftColor" format="color" />
+        <attr name="textRightColor" format="color" />
+        <attr name="textLeftClickColor" format="color" />
+        <attr name="textRightClickColor" format="color" />
+        <attr name="textLeft" format="string" />
+        <attr name="textRight" format="string" />
+        <attr name="setChecked" format="boolean" />
+        <attr name="padding" format="dimension" />
+        <attr name="time" format="integer" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+
+        <variable
+            name="updateParter"
+            type="com.xx.yuefang.bean.UpdateParter" />
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_login">
+
+                <include
+                    layout="@layout/toolbar3"
+                    bind:presenter="@{presenter}"
+                    bind:title="@{@string/editEmployee}" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-70dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/shape13"
+                    android:divider="@drawable/divider11"
+                    android:orientation="vertical"
+                    android:padding="20pt"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zcmc"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <com.xx.yuefang.ui.customview.MyEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="@string/hint11"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@={updateParter.businessCardName}"
+                            android:textColor="#000"
+                            android:textColorHint="@color/t2"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sexLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/sex"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvSex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_et"
+                                android:hint="@string/hint12"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@{updateParter.sex?@string/man:@string/woman}"
+                                android:textColor="#000"
+                                android:textColorHint="@color/t3"
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:layout_width="25pt"
+                                android:layout_height="25pt"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/jtt" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <com.xx.yuefang.ui.customview.MyEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="@string/hint5"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@={updateParter.phoneNumber}"
+                            android:textColor="#000"
+                            android:textColorHint="@color/t3"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weChat"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <com.xx.yuefang.ui.customview.MyEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="@string/hint14"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@={updateParter.email}"
+                            android:textColor="#000"
+                            android:textColorHint="@color/t3"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <com.xx.yuefang.ui.customview.MyEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="@string/hint15"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@={updateParter.address}"
+                            android:textColor="#000"
+                            android:textColorHint="@color/t3"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile"
+                            android:textColor="@color/t3"
+                            android:textSize="13sp" />
+
+                        <com.xx.yuefang.ui.customview.MyEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="@string/hint16"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@={updateParter.profile}"
+                            android:textColor="#000"
+                            android:textColorHint="@color/t3"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/ll"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape1"
+                    android:gravity="center"
+                    android:text="@string/complete"
+                    android:textColor="#fff" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

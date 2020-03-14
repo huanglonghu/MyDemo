@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="poi"
+            type="com.baidu.mapapi.search.core.PoiInfo" />
+
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{poi.name}"
+                android:textColor="@color/t2"
+                android:textSize="30pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:text="@{poi.address}"
+                android:textColor="#8e8e8e"
+                android:textSize="21pt" />
+
+
+        </LinearLayout>
+
+
+        <com.xx.yuefang.ui.customview.ImageTextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text='@{poi.distance+@string/unit6}'
+            android:drawablePadding="3dp"
+            android:textColor="@color/t1"
+            android:textSize="21pt"
+            app:direcation="0"
+            app:drawable="@drawable/adress"
+            app:drawableHeight="5dp"
+            app:drawableWidth="4dp" />
+    </RelativeLayout>
+</layout>

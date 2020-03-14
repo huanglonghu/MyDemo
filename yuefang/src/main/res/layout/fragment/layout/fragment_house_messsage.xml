@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.xx.yuefang.presenter.Presenter" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+
+
+        <variable
+            name="data"
+            type="com.xx.yuefang.bean.PremisesDetail.DataBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            bind:presenter="@{presenter}"
+            bind:title="@{data.premisesName}" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/divider" />
+
+        <ListView
+            android:id="@+id/houseMessageLv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/divider"
+            android:dividerHeight="10dp"
+            android:scrollbars="none" />
+
+        <include
+            layout="@layout/wrapper_onekey_appoint"
+            android:layout_width="match_parent"
+            android:layout_height="145pt"
+            android:layout_alignParentBottom="true"
+            bind:data="@{data}"
+            bind:presenter="@{presenter}"
+            bind:userType="@{userType}" />
+
+    </LinearLayout>
+</layout>

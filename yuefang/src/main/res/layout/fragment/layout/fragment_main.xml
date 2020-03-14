@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="position"
+            type="int" />
+
+
+        <variable
+            name="titleArray"
+            type="String[]" />
+
+        <variable
+            name="fragment"
+            type="com.xx.yuefang.ui.fragment.MainFragment" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="newsCount"
+            type="int" />
+
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.MainActivity">
+
+
+        <com.xx.yuefang.ui.customview.NoScrollViewPager
+            android:id="@+id/main_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <LinearLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="98pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->fragment.togglePager(0)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="39pt"
+                    android:layout_height="39pt"
+                    android:background="@{position==0?@drawable/home2:@drawable/home1}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home"
+                    android:textColor="@{position==0?@color/navigation4:@color/navigation3}"
+                    android:textSize="25pt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->fragment.togglePager(1)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="39pt"
+                    android:layout_height="39pt"
+                    android:background="@{position==1?@drawable/headline2:@drawable/headline1}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/headLine"
+                    android:textColor="@{position==1?@color/navigation4:@color/navigation3}"
+                    android:textSize="25pt" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="@{()->fragment.togglePager(2)}">
+
+                <LinearLayout
+                    android:id="@+id/rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="39pt"
+                        android:layout_height="39pt"
+                        android:src="@{position==2?@drawable/news2:@drawable/news1}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news"
+                        android:textColor="@{position==2?@color/navigation4:@color/navigation3}"
+                        android:textSize="25pt" />
+                </LinearLayout>
+
+                <com.xx.yuefang.ui.customview.NewsView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_toRightOf="@id/rl"
+                    android:visibility="@{newsCount>0?View.VISIBLE:View.GONE}"
+                    app:numText='@{newsCount+""}'
+                    app:reduis="9dp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="@{()->fragment.togglePager(3)}"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="39pt"
+                    android:layout_height="39pt"
+                    android:src="@{position==3?@drawable/me2:@drawable/me1}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine"
+                    android:textColor="@{position==3?@color/navigation4:@color/navigation3}"
+                    android:textSize="25pt" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

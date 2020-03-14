@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.xx.yuefang.bean.EmployeeBean.DataBeanX.DataBean" />
+
+        <variable
+            name="isChecked"
+            type="boolean" />
+
+        <variable
+            name="userType"
+            type="int" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="90pt">
+
+
+        <com.xx.yuefang.ui.customview.ImageTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8pt"
+            android:gravity="center_vertical"
+            android:text="@{bean.businessCardName}"
+            android:textColor="#000"
+            android:textSize="28pt"
+            app:drawable="@{isChecked?@drawable/cb4:@drawable/cb3}"
+            app:drawableHeight="5dp"
+            app:drawableWidth="5dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:divider="@drawable/divider6"
+            android:gravity="center_vertical"
+            android:showDividers="middle">
+
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8pt"
+                android:text="@string/edit"
+                android:textSize="24pt"
+                app:drawable="@drawable/edit"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8pt"
+                android:text="@string/delete"
+                android:textSize="24pt"
+                app:drawable="@drawable/delete2"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+            <com.xx.yuefang.ui.customview.ImageTextView
+                android:id="@+id/unBind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8pt"
+                android:text="@string/jb"
+                android:textSize="24pt"
+                android:visibility="@{userType==5?View.VISIBLE:View.GONE}"
+                app:drawable="@drawable/delete2"
+                app:drawableHeight="5dp"
+                app:drawableWidth="5dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

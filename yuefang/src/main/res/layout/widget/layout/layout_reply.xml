@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320pt"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="20pt">
+
+
+        <EditText
+            android:id="@+id/commentContent"
+            android:layout_width="match_parent"
+            android:layout_height="120pt"
+            android:background="#f0f0f0"
+            android:gravity="start"
+            android:hint="@string/hint28"
+            android:padding="16pt"
+            android:textSize="26pt" />
+
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="150pt"
+            android:layout_height="62pt"
+            android:layout_gravity="right"
+            android:layout_marginTop="20pt"
+            android:background="@drawable/shape11"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="#fff"
+            android:textSize="32pt" />
+
+
+    </LinearLayout>
+</layout>

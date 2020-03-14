@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout
+    android:layout_width="555pt"
+    android:layout_height="563pt"
+    android:background="@drawable/bg_regiseter_success"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30pt"
+    android:paddingRight="30pt">
+
+    <ImageView
+        android:layout_width="199pt"
+        android:layout_height="120pt"
+        android:layout_marginTop="50pt"
+        android:src="@drawable/success" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54pt"
+        android:text="注册成功 !"
+        android:textColor="@color/c8"
+        android:textSize="41pt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36pt"
+        android:text="恭喜您，注册成功，请耐心等待!"
+        android:textColor="@color/t12"
+        android:textSize="34pt" />
+
+    <TextView
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="90pt"
+        android:layout_marginTop="77pt"
+        android:background="@drawable/shape1"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#fff"
+        android:textSize="32pt" />
+
+
+</LinearLayout>
+</layout>

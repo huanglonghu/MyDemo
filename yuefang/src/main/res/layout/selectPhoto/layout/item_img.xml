@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xx.yuefang.ui.customview.selectphoto.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xx.yuefang.ui.customview.selectphoto.SquareImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null" />
+
+    <View
+        android:id="@+id/v_shadown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="62pt"
+        android:layout_height="62pt"
+        android:layout_gravity="right"
+        android:padding="15pt"
+        android:src="@drawable/bg_check_photo" />
+
+</com.xx.yuefang.ui.customview.selectphoto.SquareFrameLayout>
